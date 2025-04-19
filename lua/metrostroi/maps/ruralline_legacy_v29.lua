@@ -132,6 +132,7 @@ Metrostroi.AddANSPAnnouncer("[ENG] LVP announcer 1995 | Trocki", {
             dep = {{"ann_start", "dro_cls", 1.0, "next_st", "city", "click"}, {"ann_start", "dro_cls", 1.0, "next_st", "market", "click"}},
             arrlast = {{"ann_start", "tis", "aviation", "eol", "spec1", "click"}, {"ann_start", "tis", "aviation", "eol", "spec1", "click"}},
             not_last = {2, "eol", "aviation"},
+            right_doors = true,
         },
         {
             154,
@@ -223,6 +224,7 @@ Metrostroi.AddANSPAnnouncer("[ENG] LVP announcer 1995 | Rekrut Kurbel", {
             dep = {{"doors_closing", 0.25, "next_station", "CH"}, {"doors_closing", 0.25, "next_station", "MS", 0.1, "spec_handrails"}},
             arrlast = {{nil}, {"station", "AV", "platformR", "terminates_here", 0.1, "spec_belongings"}, "AV"},
             not_last = {2, "terminates_at", "AV"},
+            right_doors = true,
         },
         {
             154,
@@ -303,6 +305,7 @@ Metrostroi.SetUPOAnnouncer({
         dist = 50,
         noises = {1, 2, 3},
         noiserandom = 0.2,
+        right_doors = true,
     },
     {
         154,
@@ -407,6 +410,7 @@ Metrostroi.AddANSPAnnouncer("[ENG] LVP announcer 1995 | Rekrut Kurbel (Tape)", {
             arrlast = {{"station", "AV", "platformR", "terminates_here", 0.1, "spec_belongings"}, {"station", "AV", "platformR", "terminates_here", 0.1, "spec_belongings"}, "AV"},
             not_last = {2, "terminates_at", "AV"},
             have_inrerchange = true,
+            right_doors = true,
         },
         {
             154,
@@ -487,6 +491,7 @@ Metrostroi.SetRRIAnnouncer({
             arrlast = {{nil}, {"station", "MS", "platformR", "terminates_here", 0.1, "spec_belongings"}, "MS"},
             dep = {{"doors_closing", 0.25, "next_station", "AV", 0.1, "spec_handrails"}, {nil}},
             have_inrerchange = true,
+            right_doors = true,
         },
         {
             153,
@@ -496,6 +501,7 @@ Metrostroi.SetRRIAnnouncer({
             arrlast = {{"station", "AV", "platformR", "terminates_here", 0.1, "spec_belongings"}, {"station", "AV", "platformR", "terminates_here", 0.1, "spec_belongings"}, "AV"},
             not_last = {2, "terminates_at", "AV"},
             have_inrerchange = true,
+            right_doors = true,
         },
         {
             154,
@@ -503,6 +509,7 @@ Metrostroi.SetRRIAnnouncer({
             arr = {{"station", "CH", "platformR", 0.1, "spec_belongings"}, {"station", "CH", "platformR", 0.1, "spec_belongings"}},
             dep = {{"doors_closing", 0.25, "next_station", "WF", 0.1, "spec_emergency"}, {"doors_closing", 0.25, "next_station", "AV"}},
             have_inrerchange = true,
+            right_doors = true,
         },
         {
             155,
@@ -512,6 +519,7 @@ Metrostroi.SetRRIAnnouncer({
             arrlast = {{"station", "WF", "platformR", "terminates_here", 0.1, "spec_belongings"}, {"station", "WF", "platformR", "terminates_here", 0.1, "spec_belongings"}, "WF"},
             not_last = {2, "terminates_at", "WF"},
             have_inrerchange = true,
+            right_doors = true,
         },
         {
             156,
@@ -521,6 +529,7 @@ Metrostroi.SetRRIAnnouncer({
             arrlast = {{"station", "UP", "platformR", "terminates_here", 0.1, "spec_belongings"}, {"station", "UP", "platfromR", "terminates_here", 0.1, "spec_belongings"}, "UP"},
             not_last = {2, "terminates_at", "UP"},
             have_inrerchange = true,
+            right_doors = true,
         },
         {
             157,
@@ -528,6 +537,7 @@ Metrostroi.SetRRIAnnouncer({
             arrlast = {{"station", "RL", "platformR", "terminates_here", 0.1, "spec_belongings"}, {nil}, "RL"},
             dep = {{nil}, {"doors_closing", 0.25, "next_station", "UP", 0.1, "spec_handrails"}},
             have_inrerchange = true,
+            right_doors = true,
         }
     }
 })
