@@ -14,7 +14,6 @@
 ### Current Announcers
 | Announcer voice actor | Language | Last updated (Announcer pack version) | Notes
 | -- | :--: | :--: | :--
-| Valentin [DE/EN] | Eng + Ger | V1 | n/a
 | ☭Papa Trocki☭ | Eng | B7 | n/a
 | Marius_Mustang | Eng | V1 | n/a
 | Mr Ballistic101 | Eng | B7 | Only supported on UPO due few audio file count.
@@ -27,12 +26,10 @@
 | Announcer voice actor | Used to be supported on | Language | last updated | Notes
 | -- | :--: | -- | :--: | --
 | Pyscowicz | n/a | Eng + Fin | V1 | Removed due announcer never got it's missing audio file.
-| Valentin [DE/EN] | V3 | Eng + Ger | V1 | Removed due invalid argument about signaling and removing Sunnytown & lichterfelde from WS, i don't endorse this kind behavior from any developers.
 
 ### Supported map per announcer.
 | Announcer voice actor | gm_metro_ruralline_v29 | gm_metro_ruralline_v3
 | -- | :-: | :-:
-| Valentin [DE/EN] | No | Yes
 | ☭Papa Trocki☭ | Yes | *Yes
 | Marius_Mustang | No | Yes
 | Mr Ballistic101 | No | Yes (UPO only)
