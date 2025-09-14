@@ -14,6 +14,7 @@
 ### Current Announcers
 | Announcer voice actor | Language | Last updated (Announcer pack version) | Notes
 | -- | :--: | :--: | :--
+| Valentin [DE/EN] | Eng + Ger | V1 | n/a
 | ☭Papa Trocki☭ | Eng | B7 | n/a
 | Marius_Mustang | Eng | V1 | n/a
 | Mr Ballistic101 | Eng | B7 | Only supported on UPO due few audio file count.
@@ -30,6 +31,7 @@
 ### Supported map per announcer.
 | Announcer voice actor | gm_metro_ruralline_v29 | gm_metro_ruralline_v3
 | -- | :-: | :-:
+| Valentin [DE/EN] | No | Yes
 | ☭Papa Trocki☭ | Yes | *Yes
 | Marius_Mustang | No | Yes
 | Mr Ballistic101 | No | Yes (UPO only)
