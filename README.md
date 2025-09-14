@@ -1,15 +1,29 @@
 # Announcer for Rockport Metropolitan maps.
-## GitHub / Workshop version number: R-V3
+## GitHub / Workshop version number: R-V4
+
+The **Rockport Metropolitan Announcer Pack** is a curated collection of voiceovers from different voice actors used across all RMDT maps. The pack is regularly updated whenever new maps or announcers are added.
+
+## Contributing
+You’re welcome to fork this repository to:
+- Create your own announcers
+- Improve or expand existing announcers
+- Fix bugs in the current code
+
+Pull requests and contributions are encouraged!
+
+> **Note:** Please keep quality standards in mind — low-quality announcers or submissions that don’t meet basic requirements will not be accepted.
+
 
 ### Announcer pack supported maps
 | Map name | Map version(s) Supported | Owner of the line | Set in (year) | Notes
 | -- | :--: | -- | :--: | --
-| gm_metro_ruralline | V3 | Lakeview transport (LVP) (1954 - 1999) | 1995 | V29 support dropped on (version).
+| gm_metro_ruralline | V29 (new) | Lakeview Transport (LVP) | 1995 | Only few voices support V29 anymore, check below.
+| gm_metro_ruralline | V3 | Lakeview transport (LVP) | 1995 | -
 
 #### Future maps/Versions
 | Map name | Versions | Owner of the line | Set in (year) | Notes
 | -- | :--: | -- | :--: | --
-| gm_metro_ruralline | V4 | Rockport Metropolitan (RPM) [2000 - today] | 2001 | Supported if gets released..
+| gm_metro_ruralline | V4 | Rockport Metropolitan (RPM) | 2005 | Supported if gets released..
 
 ### Current Announcers
 | Announcer voice actor | Language | Last updated (Announcer pack version) | Notes
@@ -19,14 +33,9 @@
 | Marius_Mustang | Eng | V1 | n/a
 | Mr Ballistic101 | Eng | B7 | Only supported on UPO due few audio file count.
 | Concord | Eng | Pre-announcer pack release. | Old announcer, Pre-V29.
-| tankict | Eng + Rus | V1 | n/a
+| tankict | Eng + Rus | V4 | n/a
 | NorwayLCAndTrains | Eng + PL | V1 | n/a
 | Rekrut Kurbel | EN | V2.3 | ASNP + RIU
-
-### Removed announcers
-| Announcer voice actor | Used to be supported on | Language | last updated | Notes
-| -- | :--: | -- | :--: | --
-| Pyscowicz | n/a | Eng + Fin | V1 | Removed due announcer never got it's missing audio file.
 
 ### Supported map per announcer.
 | Announcer voice actor | gm_metro_ruralline_v29 | gm_metro_ruralline_v3
@@ -34,12 +43,8 @@
 | Valentin [DE/EN] | No | Yes
 | ☭Papa Trocki☭ | Yes | *Yes
 | Marius_Mustang | No | Yes
-| Mr Ballistic101 | No | Yes (UPO only)
+| Mr Ballistic101 | Yes (UPO Only) | Yes (UPO only)
 | Concord | Yes | *Yes
 | tankict | No | Yes
 | NorwayLCAndTrains | No | Yes
 | Rekrut Kurbel | Yes | Yes
-> * Announcer only supports V3 as Full route and does not have any Alt-Routes or Is using old V29 announcer files and does have missing / mistakes in.
-### Check wiki for the map specified information.
-- Station ID's
-- Small history.

@@ -313,6 +313,7 @@ Metrostroi.AddANSPAnnouncer("[PL + ENG] LVP announcer 1995 | NorwayLCAndTrains",
 })
 
 -- Tankict announcer
+--[[  Disabled for now.
 Metrostroi.AddANSPAnnouncer("[ENG + RU] LVP announcer 1995 | Tankict", {
     asnp = true,
     -- Announcer starting files
@@ -321,44 +322,15 @@ Metrostroi.AddANSPAnnouncer("[ENG + RU] LVP announcer 1995 | Tankict", {
     click1 = {"subway_announcers/asnp/click.mp3", 0.30},
     click2 = {"subway_announcers/asnp/click2.mp3", 0.10},
     announcer_ready = {"subway_announcers/global-sounds/mireo_gong_01.mp3", 1.24},
-    -- Doors closing
     dro_cls = {"subway_announcers/global-sounds/doors_closing/old-doors.mp3", 4.54},
-    --dro_cls = {"subway_announcers/global-sounds/doors_closing/futr-doors.mp3",2.40},
-    --dro_cls = {"subway_announcers/global-sounds/doors_closing/tape-doors.mp3",4.25},
     -- Normal Announcer files (english)
-    market = {"subway_announcers/v3_announcers/tankict_announcer/en/stations/market_street_eng.mp3", 1.47},
-    aviation = {"subway_announcers/v3_announcers/tankict_announcer/en/stations/aviation_university_eng.mp3", 2.44},
-    city = {"subway_announcers/v3_announcers/tankict_announcer/en/stations/lakeview_city_hall_eng.mp3", 1.77},
-    white = {"subway_announcers/v3_announcers/tankict_announcer/en/stations/white_forest_eng.mp3", 1.54},
-    urban = {"subway_announcers/v3_announcers/tankict_announcer/en/stations/urban_park_eng.mp3", 2.10},
-    rock = {"subway_announcers/v3_announcers/tankict_announcer/en/stations/rocklake_eng.mp3", 1.44},
+
     -- Special announcers (English)
-    train_goes = {"subway_announcers/v3_announcers/tankict_announcer/en/special/train_goes_to_eng.mp3", 2.38},
-    doors_close = {"subway_announcers/v3_announcers/tankict_announcer/en/special/doors_are_closing_eng.mp3", 2.28},
-    nxt_st = {"subway_announcers/v3_announcers/tankict_announcer/en/special/next_station_eng.mp3", 1.52},
-    mind_gap = {"subway_announcers/v3_announcers/tankict_announcer/en/special/mind_the_gap_eng.mp3", 3.37},
-    st_end = {"subway_announcers/v3_announcers/tankict_announcer/en/special/end_station_eng.mp3", 3.72},
-    stuff = {"subway_announcers/v3_announcers/tankict_announcer/en/special/dont_forget_your_stuff_eng.mp3", 4.57},
-    polite = {"subway_announcers/v3_announcers/tankict_announcer/en/special/be_mutually_polite_eng.mp3", 8.51},
-    arrival_end = {"subway_announcers/v3_announcers/tankict_announcer/en/special/arrival_to_end_eng.mp3", 8.56},
-    arrival = {"subway_announcers/v3_announcers/tankict_announcer/en/special/arrival_eng.mp3", 0.80},
+
     -- Normal Announcer files (Russian)
-    market_ru = {"subway_announcers/v3_announcers/tankict_announcer/ru/stations/market_street.mp3", 1.73},
-    aviation_ru = {"subway_announcers/v3_announcers/tankict_announcer/ru/stations/aviation_university.mp3", 2.77},
-    city_ru = {"subway_announcers/v3_announcers/tankict_announcer/ru/stations/lakeview_city_hall.mp3", 2.32},
-    white_ru = {"subway_announcers/v3_announcers/tankict_announcer/ru/stations/white_forest.mp3", 1.71},
-    urban_ru = {"subway_announcers/v3_announcers/tankict_announcer/ru/stations/urban_park.mp3",},
-    rock_ru = {"subway_announcers/v3_announcers/tankict_announcer/ru/stations/rocklake.mp3", 1.64},
+
     -- Special announcers (Russian)
-    train_goes_ru = {"subway_announcers/v3_announcers/tankict_announcer/ru/special/train_goes_to.mp3", 2.79},
-    nxt_st_ru = {"subway_announcers/v3_announcers/tankict_announcer/ru/special/next_station_ru.mp3", 1.42},
-    doors_close_ru = {"subway_announcers/v3_announcers/tankict_announcer/ru/special/doors_closing_ru.mp3", 2.13},
-    mind_gap_ru = {"subway_announcers/v3_announcers/tankict_announcer/ru/special/mind_the_gap.mp3", 5.13},
-    st_end_ru = {"subway_announcers/v3_announcers/tankict_announcer/ru/special/end_station.mp3", 8.17},
-    stuff_ru = {"subway_announcers/v3_announcers/tankict_announcer/ru/special/dont_forget_your_stuff.mp3", 4.68},
-    polite_ru = {"subway_announcers/v3_announcers/tankict_announcer/ru/special/be_mutually_polite.mp3", 8.41},
-    arrival_end_ru = {"subway_announcers/v3_announcers/tankict_announcer/ru/special/arrival_to_end.mp3", 8.35},
-    arrival_ru = {"subway_announcers/v3_announcers/tankict_announcer/ru/special/arrival.mp3", 1.14},
+
 }, {
     {
         LED = {3, 8, 5, 5, 4, 5},
@@ -419,6 +391,7 @@ Metrostroi.AddANSPAnnouncer("[ENG + RU] LVP announcer 1995 | Tankict", {
         }
     }
 })
+]]--
 
 -- Rekrut Kurbel's custom announcer & routes
 Metrostroi.AddANSPAnnouncer("[ENG] LVP announcer 1995 | Rekrut Kurbel", {
