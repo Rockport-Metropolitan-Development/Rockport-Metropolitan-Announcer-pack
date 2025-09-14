@@ -27,7 +27,6 @@
 | Announcer voice actor | Used to be supported on | Language | last updated | Notes
 | -- | :--: | -- | :--: | --
 | Pyscowicz | n/a | Eng + Fin | V1 | Removed due announcer never got it's missing audio file.
-| Valentin [DE/EN] | V3 | Eng + Ger | V1 | Removed due invalid argument about signaling and removing Sunnytown & lichterfelde from WS, i don't endorse this kind behavior from any developers.
 
 ### Supported map per announcer.
 | Announcer voice actor | gm_metro_ruralline_v29 | gm_metro_ruralline_v3
