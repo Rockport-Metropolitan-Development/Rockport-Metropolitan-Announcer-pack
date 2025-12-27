@@ -41,7 +41,7 @@ Pull requests and contributions are encouraged!
 | Announcer voice actor | gm_metro_ruralline_v29 | gm_metro_ruralline_v3
 | -- | :-: | :-:
 | Valentin [DE/EN] | No | Yes
-| ☭Papa Trocki☭ | Yes | *Yes
+| ☭Papa Trocki☭ | Yes | No
 | Marius_Mustang | No | Yes
 | Mr Ballistic101 | Yes (UPO Only) | Yes (UPO only)
 | Concord | Yes | *Yes

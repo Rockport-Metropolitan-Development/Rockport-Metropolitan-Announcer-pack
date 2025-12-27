@@ -487,167 +487,6 @@ Metrostroi.AddANSPAnnouncer("[ENG] LVP announcer 1995 | Rekrut Kurbel", {
     }
 })
 
--- Old / Legacy versions (semi-supportive of V3)
--- trocki_announcer
-Metrostroi.AddANSPAnnouncer("[ENG] LVP announcer 1995 | Trocki", {
-    asnp = true,
-    -- Announcer starting files
-    ann_start = {"subway_announcers/global-sounds/mireo_gong_01.mp3", 1.24},
-    click = {"subway_announcers/global-sounds/rri-click.mp3", 0.31},
-    click1 = {"subway_announcers/asnp/click.mp3", 0.30},
-    click2 = {"subway_announcers/asnp/click2.mp3", 0.10},
-    announcer_ready = {"subway_announcers/global-sounds/mireo_gong_01.mp3", 1.24},
-    -- Doors closing
-    dro_cls = {"subway_announcers/global-sounds/doors_closing/old-doors.mp3", 4.54},
-    --dro_cls = {"subway_announcers/global-sounds/doors_closing/futr-doors.mp3",2.40},
-    --dro_cls = {"subway_announcers/global-sounds/doors_closing/tape-doors.mp3",4.25},
-    -- Normal Announcer files
-    spc1 = {"subway_announcers/legacy_announcers_v29/trocki_announcer/special_1.mp3", 4.15},
-    fault = {"subway_announcers/legacy_announcers_v29/trocki_announcer/special_2.mp3", 4.60},
-    tis = {"subway_announcers/legacy_announcers_v29/trocki_announcer/this_is_station.mp3", 1.41},
-    eol = {"subway_announcers/legacy_announcers_v29/trocki_announcer/end_of_line.mp3", 3.32},
-    next_st = {"subway_announcers/legacy_announcers_v29/trocki_announcer/next_station.mp3", 2.17},
-    market = {"subway_announcers/legacy_announcers_v29/trocki_announcer/market_street.mp3", 1.88},
-    aviation = {"subway_announcers/legacy_announcers_v29/trocki_announcer/aviation.mp3", 2.12},
-    city = {"subway_announcers/legacy_announcers_v29/trocki_announcer/city_hall.mp3", 1.75},
-    white = {"subway_announcers/legacy_announcers_v29/trocki_announcer/white_forest.mp3", 1.85},
-    urban = {"subway_announcers/legacy_announcers_v29/trocki_announcer/urban_park.mp3", 1.59},
-    rocklake = {"subway_announcers/legacy_announcers_v29/trocki_announcer/rocklake.mp3", 1.38},
-}, {
-    {
-        LED = {3, 8, 5, 5, 4, 5},
-        Name = "MT-4 Market St. Line",
-        Loop = false,
-        spec_last = {"ann_start", "click"},
-        spec_wait = {"ann_start", "fault"},
-        BlockDoors = true,
-        {
-            400,
-            "Market St.",
-            arrlast = {{nil}, {"ann_start", "tis", "market", 0.3, "eol", 0.3, "spec1", "click"}},
-            dep = {{"ann_start", "dro_cls", 1.0, "next_st", "aviation", "click"}, {nil}},
-            have_inrerchange = true,
-            right_doors = true,
-        },
-        {
-            402,
-            "Aviation Uni.",
-            arr = {{"ann_start", "tis", "aviation", "click"}, {"ann_start", "tis", "aviation", "click"}},
-            dep = {{"ann_start", "dro_cls", 1.0, "next_st", "city", "click"}, {"ann_start", "dro_cls", 1.0, "next_st", "market", "click"}},
-            arrlast = {{"ann_start", "tis", "aviation", "eol", "spec1", "click"}, {"ann_start", "tis", "aviation", "eol", "spec1", "click"}},
-            not_last = {2, "eol", "aviation"},
-        },
-        {
-            403,
-            "Lakeview Cth",
-            arr = {{"ann_start", "tis", "city", "click"}, {"ann_start", "tis", "city", "click"}},
-            dep = {{"ann_start", "dro_cls", 0.5, "next_st", "white", "click"}, {"ann_start", "dro_cls", 0.5, "next_st", "aviation", "click"}},
-            right_doors = true,
-        },
-        {
-            404,
-            "White Forest",
-            arr = {{"ann_start", "tis", "white", "click"}, {"ann_start", "tis", "white", "click"}},
-            dep = {{"ann_start", "dro_cls", 1.0, "next_st", "urban", "click"}, {"ann_start", "dro_cls", 1.0, "next_st", "city", "click"}},
-            arrlast = {{"ann_start", "tis", "white", 0.3, "eol", 0.3, "spec1", "click"}, {"ann_start", "tis", "white", 0.3, "eol", 0.3, "spec1", "click"}},
-            not_last = {2, "eol", "white"},
-            right_doors = true,
-        },
-        {
-            405,
-            "Urban Park",
-            arr = {{"ann_start", "tis", "urban", "click"}, {"ann_start", "tis", "urban", "click"}},
-            dep = {{"ann_start", "dro_cls", 0.5, "next_st", "rocklake", "click"}, {"ann_start", "dro_cls", 0.5, "next_st", "white", "click"}},
-            arrlast = {{"ann_start", "tis", "urban", 0.3, "eol", 0.3, "spec1", "click"}, {"ann_start", "tis", "urban", 0.3, "eol", 0.3, "spec1", "click"}},
-            not_last = {2, "eol", "urban"},
-            have_inrerchange = true,
-            right_doors = true,
-        },
-        {
-            406,
-            "Rocklake",
-            arrlast = {{"ann_start", "tis", "rocklake", "eol", "spec1", "click"}, {nil}},
-            dep = {{nil}, {"ann_start", "dro_cls", 0.5, "next_st", "urban", "click"}},
-            have_inrerchange = true,
-            right_doors = true,
-        }
-    }
-})
-
-Metrostroi.AddANSPAnnouncer("[ENG]LVP Announcer 1989 | Legacy announcer by Concord", {
-    -- Global sounds
-    ann_start = {"subway_announcers/global-sounds/mireo_gong_01.mp3", 1.24},
-    click = {"subway_announcers/global-sounds/rri-click.mp3", 0.31},
-    click1 = {"subway_announcers/asnp/click.mp3", 0.30},
-    click2 = {"subway_announcers/asnp/click2.mp3", 0.10},
-    announcer_ready = {"subway_announcers/global-sounds/mireo_gong_01.mp3", 1.24},
-    drt_cls = {"subway_announcers/global-sounds/doors_closing/tape-doors.mp3", 4.25},
-    -- Station sounds
-    arr_market_street = {"subway_announcers/legacy_announcers_v29/concord-announcer/arr_market_street.mp3", 1.827000},
-    next_market_street = {"subway_announcers/legacy_announcers_v29/concord-announcer/next_market_street.mp3", 2.583900},
-    arr_aviation_university = {"subway_announcers/legacy_announcers_v29/concord-announcer/arr_aviation_university.mp3", 2.322900},
-    next_aviation_university = {"subway_announcers/legacy_announcers_v29/concord-announcer/next_aviation_university.mp3", 3.053700},
-    arr_city_hall = {"subway_announcers/legacy_announcers_v29/concord-announcer/arr_city_hall.mp3", 1.696500},
-    next_city_hall = {"subway_announcers/legacy_announcers_v29/concord-announcer/next_city_hall.mp3", 2.427300},
-    arr_white_forest = {"subway_announcers/legacy_announcers_v29/concord-announcer/arr_white_forest.mp3", 1.983600},
-    arr_white_forest_last = {"subway_announcers/legacy_announcers_v29/concord-announcer/arr_white_forest_last.mp3", 4.071600},
-    next_white_forest = {"subway_announcers/legacy_announcers_v29/concord-announcer/next_white_forest.mp3", 2.714400},
-    arr_urban_park = {"subway_announcers/legacy_announcers_v29/concord-announcer/arr_urban_park.mp3", 1.827000},
-    next_urban_park = {"subway_announcers/legacy_announcers_v29/concord-announcer/next_urban_park.mp3", 2.557800},
-    arr_rocklake = {"subway_announcers/legacy_announcers_v29/concord-announcer/arr_rocklake.mp3", 3.915000},
-    next_rocklake = {"subway_announcers/legacy_announcers_v29/concord-announcer/next_rocklake.mp3", 2.583900},
-}, {
-    {
-        LED = {3, 8, 5, 5, 4, 5},
-        Name = "MT-4 Market St. Line",
-        Loop = false,
-        spec_last = {"announcer_ready", "gong"},
-        spec_wait = {"red_signal"},
-        {
-            400,
-            "Market St.",
-            arrlast = {{nil}, {"arr_market_street", "click2"}},
-            dep = {{"drt_cls", 0.5, "next_aviation_university"}, {nil}},
-        },
-        {
-            402,
-            "Aviation Uni.",
-            arr = {{"arr_aviation_university"}, {"arr_aviation_university"}},
-            dep = {{"drt_cls", 0.5, "next_city_hall"}, {"drt_cls", 0.5, "next_market_street"}},
-        },
-        --arrlast = No support as back then turning around at AV was not possible.
-        -- //TODO mb add from other announcer a support here....
-        {
-            403,
-            "Lakeview Cth",
-            arr = {{"arr_city_hall"}, {"arr_city_hall"}},
-            dep = {{"drt_cls", 0.5, "next_white_forest"}, {"drt_cls", 0.5, "next_aviation_university"}},
-        },
-        {
-            404,
-            "White Forest",
-            arr = {{"arr_white_forest"}, {"arr_white_forest"}},
-            arrlast = {{"arr_white_forest_last"}, {"arr_white_forest_last", "click2"}},
-            dep = {{"drt_cls", 0.5, "next_urban_park"}, {"drt_cls", 0.5, "next_city_hall"}},
-            ignorelast = true,
-        },
-        {
-            405,
-            "Urban Park",
-            arr = {{"arr_urban_park"}, {"arr_urban_park"}},
-            dep = {{"drt_cls", 0.5, "next_rocklake"}, {"drt_cls", 0.5, "next_white_forest"}},
-        },
-        --arrlast = No support as back then turning around at AV was not possible.
-        -- //TODO mb add from other announcer a support here....
-        {
-            406,
-            "Rocklake",
-            arrlast = {{"arr_rocklake", "click2"}, {nil}},
-            dep = {{nil,}, {"drt_cls", 0.5, "next_urban_park"}},
-        }
-    }
-})
-
 -- RIU Announcers
 Metrostroi.AddANSPAnnouncer("[ENG] LVP announcer 1995 | Rekrut Kurbel (Tape)", {
     riu = true,
@@ -916,6 +755,81 @@ Metrostroi.SetUPOAnnouncer({
         noises = {1, 2, 3},
         noiserandom = 0.2,
         right_doors = true
+    }
+})
+
+-- Old / Legacy versions (semi-supportive of V3)
+Metrostroi.AddANSPAnnouncer("[ENG]LVP Announcer 1989 | Legacy announcer by Concord", {
+    -- Global sounds
+    ann_start = {"subway_announcers/global-sounds/mireo_gong_01.mp3", 1.24},
+    click = {"subway_announcers/global-sounds/rri-click.mp3", 0.31},
+    click1 = {"subway_announcers/asnp/click.mp3", 0.30},
+    click2 = {"subway_announcers/asnp/click2.mp3", 0.10},
+    announcer_ready = {"subway_announcers/global-sounds/mireo_gong_01.mp3", 1.24},
+    drt_cls = {"subway_announcers/global-sounds/doors_closing/tape-doors.mp3", 4.25},
+    -- Station sounds
+    arr_market_street = {"subway_announcers/legacy_announcers_v29/concord-announcer/arr_market_street.mp3", 1.827000},
+    next_market_street = {"subway_announcers/legacy_announcers_v29/concord-announcer/next_market_street.mp3", 2.583900},
+    arr_aviation_university = {"subway_announcers/legacy_announcers_v29/concord-announcer/arr_aviation_university.mp3", 2.322900},
+    next_aviation_university = {"subway_announcers/legacy_announcers_v29/concord-announcer/next_aviation_university.mp3", 3.053700},
+    arr_city_hall = {"subway_announcers/legacy_announcers_v29/concord-announcer/arr_city_hall.mp3", 1.696500},
+    next_city_hall = {"subway_announcers/legacy_announcers_v29/concord-announcer/next_city_hall.mp3", 2.427300},
+    arr_white_forest = {"subway_announcers/legacy_announcers_v29/concord-announcer/arr_white_forest.mp3", 1.983600},
+    arr_white_forest_last = {"subway_announcers/legacy_announcers_v29/concord-announcer/arr_white_forest_last.mp3", 4.071600},
+    next_white_forest = {"subway_announcers/legacy_announcers_v29/concord-announcer/next_white_forest.mp3", 2.714400},
+    arr_urban_park = {"subway_announcers/legacy_announcers_v29/concord-announcer/arr_urban_park.mp3", 1.827000},
+    next_urban_park = {"subway_announcers/legacy_announcers_v29/concord-announcer/next_urban_park.mp3", 2.557800},
+    arr_rocklake = {"subway_announcers/legacy_announcers_v29/concord-announcer/arr_rocklake.mp3", 3.915000},
+    next_rocklake = {"subway_announcers/legacy_announcers_v29/concord-announcer/next_rocklake.mp3", 2.583900},
+}, {
+    {
+        LED = {3, 8, 5, 5, 4, 5},
+        Name = "MT-4 Market St. Line",
+        Loop = false,
+        spec_last = {"announcer_ready", "gong"},
+        spec_wait = {"red_signal"},
+        {
+            400,
+            "Market St.",
+            arrlast = {{nil}, {"arr_market_street", "click2"}},
+            dep = {{"drt_cls", 0.5, "next_aviation_university"}, {nil}},
+        },
+        {
+            402,
+            "Aviation Uni.",
+            arr = {{"arr_aviation_university"}, {"arr_aviation_university"}},
+            dep = {{"drt_cls", 0.5, "next_city_hall"}, {"drt_cls", 0.5, "next_market_street"}},
+        },
+        --arrlast = No support as back then turning around at AV was not possible.
+        -- //TODO mb add from other announcer a support here....
+        {
+            403,
+            "Lakeview Cth",
+            arr = {{"arr_city_hall"}, {"arr_city_hall"}},
+            dep = {{"drt_cls", 0.5, "next_white_forest"}, {"drt_cls", 0.5, "next_aviation_university"}},
+        },
+        {
+            404,
+            "White Forest",
+            arr = {{"arr_white_forest"}, {"arr_white_forest"}},
+            arrlast = {{"arr_white_forest_last"}, {"arr_white_forest_last", "click2"}},
+            dep = {{"drt_cls", 0.5, "next_urban_park"}, {"drt_cls", 0.5, "next_city_hall"}},
+            ignorelast = true,
+        },
+        {
+            405,
+            "Urban Park",
+            arr = {{"arr_urban_park"}, {"arr_urban_park"}},
+            dep = {{"drt_cls", 0.5, "next_rocklake"}, {"drt_cls", 0.5, "next_white_forest"}},
+        },
+        --arrlast = No support as back then turning around at AV was not possible.
+        -- //TODO mb add from other announcer a support here....
+        {
+            406,
+            "Rocklake",
+            arrlast = {{"arr_rocklake", "click2"}, {nil}},
+            dep = {{nil,}, {"drt_cls", 0.5, "next_urban_park"}},
+        }
     }
 })
 
