@@ -245,7 +245,7 @@ Metrostroi.AddANSPAnnouncer("[PL + ENG] LVP announcer 1995 | NorwayLCAndTrains",
     city = {"subway_announcers/v3_announcers/norwaylcandtrains_announcer/station - lakeview city hall.mp3", 5.25},
     white = {"subway_announcers/v3_announcers/norwaylcandtrains_announcer/station - white forest.mp3", 4.43},
     urban = {"subway_announcers/v3_announcers/norwaylcandtrains_announcer/station - urban park.mp3", 4.55},
-    rocklake = {"subway_announcers/v3_announcers/norwaylcandtrains_announcer/next - rocklake.mp3", 12.10},
+    rocklake = {"subway_announcers/v3_announcers/norwaylcandtrains_announcer/station - rocklake.mp3", 12.10},
     -- Special announcers
     nxt_market = {"subway_announcers/v3_announcers/norwaylcandtrains_announcer/next - market street.mp3", 6.15},
     nxt_aviation = {"subway_announcers/v3_announcers/norwaylcandtrains_announcer/next - aviation university.mp3", 7.00},
@@ -275,7 +275,7 @@ Metrostroi.AddANSPAnnouncer("[PL + ENG] LVP announcer 1995 | NorwayLCAndTrains",
             arr = {{"ann_start", "aviation", "click"}, {"ann_start", "aviation", "click"}},
             dep = {{"dro_cls", 1.0, "nxt_city", "click"}, {"dro_cls", 1.0, "nxt_market", "click"}},
             arrlast = {{nil}, {"ann_start", "aviation", "click"}},
-            not_last = {2, "terminal", "urban", 1.0, "click"},
+            not_last = {2, "urban", 1.0, "click"},
         },
         {
             403,
@@ -290,16 +290,16 @@ Metrostroi.AddANSPAnnouncer("[PL + ENG] LVP announcer 1995 | NorwayLCAndTrains",
             arr = {{"ann_start", "white", "click"}, {"ann_start", "white", "click"}},
             dep = {{"dro_cls", 1.0, "nxt_urban", "click"}, {"dro_cls", 1.0, "nxt_city", "click"}},
             arrlast = {{"ann_start", "white", "click"}, {"ann_start", "white", "click"}},
-            not_last = {2, "terminal", "urban", 1.0, "click"},
+            not_last = {2, "urban", 1.0, "click"},
             right_doors = true,
         },
         {
             405,
             "Urban Park",
             arr = {{"ann_start", "urban", "click"}, {"ann_start", "urban", "click"}},
-            dep = {{"dro_cls", 1.0, "nxt_rock", "click"}, {"dro_cls", 1.0, "next_white", "click"}},
+            dep = {{"dro_cls", 1.0, "nxt_rock", "click"}, {"dro_cls", 1.0, "net_white", "click"}},
             arrlast = {{"ann_start", "urban", "click"}, {"ann_start", "urban", "click"}},
-            not_last = {2, "terminal", "urban", 1.0, "click"},
+            not_last = {2, "urban", 1.0, "click"},
             have_inrerchange = true,
             right_doors = true,
         },
@@ -830,8 +830,8 @@ Metrostroi.AddANSPAnnouncer("[ENG]LVP Announcer 1989 | Legacy announcer by Conco
         LED = {3, 8, 5, 5, 4, 5},
         Name = "MT-4 Market St. Line",
         Loop = false,
-        spec_last = {"announcer_ready", "gong"},
-        spec_wait = {"red_signal"},
+        spec_last = {"announcer_ready"},
+        spec_wait = {"click2"},
         {
             400,
             "Market St.",
@@ -885,7 +885,7 @@ Metrostroi.AddLastStationTex("700", 997, "metrostroi_skins/destination_am/997-mu
 Metrostroi.AddLastStationTex("700", 998, "metrostroi_skins/destination_am/996-worktrain") -- Worktrain
 Metrostroi.AddLastStationTex("700", 406, "metrostroi_skins/destination_am/906-rl") -- Rocklake
 Metrostroi.AddLastStationTex("700", 405, "metrostroi_skins/destination_am/905-up") -- Urban Park
-Metrostroi.AddLastStationTex("700", 403, "metrostroi_skins/destination_am/904-wf") -- White Froest
+Metrostroi.AddLastStationTex("700", 404, "metrostroi_skins/destination_am/904-wf") -- White Froest
 Metrostroi.AddLastStationTex("700", 402, "metrostroi_skins/destination_am/902-avi") -- Aviation Univcersity
 Metrostroi.AddLastStationTex("700", 401, "metrostroi_skins/destination_am/901-raven") -- Ravenholm
 Metrostroi.AddLastStationTex("700", 400, "metrostroi_skins/destination_am/900-ms") -- Market Street
@@ -893,44 +893,44 @@ Metrostroi.AddLastStationTex("700", 400, "metrostroi_skins/destination_am/900-ms
 Metrostroi.AddLastStationTex("702", 999, "metrostroi_skins/81-702_names/999-nis-d") -- Not in service
 Metrostroi.AddLastStationTex("702", 998, "metrostroi_skins/81-702_names/998-blank-d") -- Blank Texture.
 Metrostroi.AddLastStationTex("702", 400, "metrostroi_skins/81-702_names/900-ms-d") -- Market street
-Metrostroi.AddLastStationTex("702", 901, "metrostroi_skins/81-702_names/901-raven-d") -- Ravenholm
-Metrostroi.AddLastStationTex("702", 902, "metrostroi_skins/81-702_names/902-avi-d") -- Aviation university
-Metrostroi.AddLastStationTex("702", 904, "metrostroi_skins/81-702_names/904-wh-d") -- White forest
-Metrostroi.AddLastStationTex("702", 905, "metrostroi_skins/81-702_names/905-up-d") -- Urban park
-Metrostroi.AddLastStationTex("702", 906, "metrostroi_skins/81-702_names/906-rl-d") -- rocklake
+Metrostroi.AddLastStationTex("702", 401, "metrostroi_skins/81-702_names/901-raven-d") -- Ravenholm
+Metrostroi.AddLastStationTex("702", 402, "metrostroi_skins/81-702_names/902-avi-d") -- Aviation university
+Metrostroi.AddLastStationTex("702", 404, "metrostroi_skins/81-702_names/904-wh-d") -- White forest
+Metrostroi.AddLastStationTex("702", 405, "metrostroi_skins/81-702_names/905-up-d") -- Urban park
+Metrostroi.AddLastStationTex("702", 406, "metrostroi_skins/81-702_names/906-rl-d") -- rocklake
 -- 710
 Metrostroi.AddLastStationTex("710", 999, "metrostroi_skins/81-717_names/999-blank") -- Blank
 Metrostroi.AddLastStationTex("710", 998, "metrostroi_skins/81-710_names/998-ofs") -- Out Of Service
 Metrostroi.AddLastStationTex("710", 997, "metrostroi_skins/81-710_names/997-museumtr") -- Museum Train
 Metrostroi.AddLastStationTex("710", 996, "metrostroi_skins/81-710_names/996-worktrain") -- Work Train
-Metrostroi.AddLastStationTex("710", 400, "metrostroi_skins/81-710_names/900-ms") -- Market street
-Metrostroi.AddLastStationTex("710", 901, "metrostroi_skins/81-710_names/901-raven") -- Ravenholm
-Metrostroi.AddLastStationTex("710", 902, "metrostroi_skins/81-710_names/902-avi") -- Aviation university
-Metrostroi.AddLastStationTex("710", 904, "metrostroi_skins/81-710_names/904-wf") -- White forest
-Metrostroi.AddLastStationTex("710", 905, "metrostroi_skins/81-710_names/905-up") -- Urban park
-Metrostroi.AddLastStationTex("710", 906, "metrostroi_skins/81-710_names/906-rl") -- rocklake
+Metrostroi.AddLastStationTex("710", 400, "metrostroi_skins/81-702_names/900-ms-d") -- Market street
+Metrostroi.AddLastStationTex("710", 401, "metrostroi_skins/81-702_names/901-raven-d") -- Ravenholm
+Metrostroi.AddLastStationTex("710", 402, "metrostroi_skins/81-702_names/902-avi-d") -- Aviation university
+Metrostroi.AddLastStationTex("710", 404, "metrostroi_skins/81-702_names/904-wh-d") -- White forest
+Metrostroi.AddLastStationTex("710", 405, "metrostroi_skins/81-702_names/905-up-d") -- Urban park
+Metrostroi.AddLastStationTex("710", 406, "metrostroi_skins/81-702_names/906-rl-d") -- rocklake
 --717
 Metrostroi.AddLastStationTex("717", 999, "metrostroi_skins/81-717_schemes/999-blank") -- Blank
 Metrostroi.AddLastStationTex("717", 998, "metrostroi_skins/81-717_schemes/998-ofs") -- Out Of Service
 Metrostroi.AddLastStationTex("717", 997, "metrostroi_skins/81-717_schemes/997-museumtr") -- Museum Train
 Metrostroi.AddLastStationTex("717", 996, "metrostroi_skins/81-717_schemes/996-worktrain") -- Work Train
-Metrostroi.AddLastStationTex("717", 400, "metrostroi_skins/81-717_schemes/900-ms") -- Market street
-Metrostroi.AddLastStationTex("717", 901, "metrostroi_skins/81-717_schemes/901-raven") -- Ravenholm
-Metrostroi.AddLastStationTex("717", 902, "metrostroi_skins/81-717_schemes/902-avi") -- Aviation university
-Metrostroi.AddLastStationTex("717", 904, "metrostroi_skins/81-717_schemes/904-wf") -- White forest
-Metrostroi.AddLastStationTex("717", 905, "metrostroi_skins/81-717_schemes/905-up") -- Urban park
-Metrostroi.AddLastStationTex("717", 906, "metrostroi_skins/81-717_schemes/906-rl") -- rocklake
+Metrostroi.AddLastStationTex("717", 400, "metrostroi_skins/81-702_names/900-ms-d") -- Market street
+Metrostroi.AddLastStationTex("717", 401, "metrostroi_skins/81-702_names/901-raven-d") -- Ravenholm
+Metrostroi.AddLastStationTex("717", 402, "metrostroi_skins/81-702_names/902-avi-d") -- Aviation university
+Metrostroi.AddLastStationTex("717", 404, "metrostroi_skins/81-702_names/904-wh-d") -- White forest
+Metrostroi.AddLastStationTex("717", 405, "metrostroi_skins/81-702_names/905-up-d") -- Urban park
+Metrostroi.AddLastStationTex("717", 406, "metrostroi_skins/81-702_names/906-rl-d") -- rocklake
 --720
 Metrostroi.AddLastStationTex("720", 999, "metrostroi_skins/81-717_schemes/999-blank") -- Blank
 Metrostroi.AddLastStationTex("720", 998, "metrostroi_skins/81-717_schemes/998-ofs") -- Out Of Service
 Metrostroi.AddLastStationTex("720", 997, "metrostroi_skins/81-717_schemes/997-museumtr") -- Museum Train
 Metrostroi.AddLastStationTex("720", 996, "metrostroi_skins/81-717_schemes/996-worktrain") -- Work Train
-Metrostroi.AddLastStationTex("720", 400, "metrostroi_skins/81-717_schemes/900-ms") -- Market street
-Metrostroi.AddLastStationTex("720", 901, "metrostroi_skins/81-717_schemes/901-raven") -- Ravenholm
-Metrostroi.AddLastStationTex("720", 902, "metrostroi_skins/81-717_schemes/902-avi") -- Aviation university
-Metrostroi.AddLastStationTex("720", 904, "metrostroi_skins/81-717_schemes/904-wf") -- White forest
-Metrostroi.AddLastStationTex("720", 905, "metrostroi_skins/81-717_schemes/905-up") -- Urban park
-Metrostroi.AddLastStationTex("720", 906, "metrostroi_skins/81-717_schemes/906-rl") -- rocklake
+Metrostroi.AddLastStationTex("720", 400, "metrostroi_skins/81-702_names/900-ms-d") -- Market street
+Metrostroi.AddLastStationTex("720", 401, "metrostroi_skins/81-702_names/901-raven-d") -- Ravenholm
+Metrostroi.AddLastStationTex("720", 402, "metrostroi_skins/81-702_names/902-avi-d") -- Aviation university
+Metrostroi.AddLastStationTex("720", 404, "metrostroi_skins/81-702_names/904-wh-d") -- White forest
+Metrostroi.AddLastStationTex("720", 405, "metrostroi_skins/81-702_names/905-up-d") -- Urban park
+Metrostroi.AddLastStationTex("720", 406, "metrostroi_skins/81-702_names/906-rl-d") -- rocklake
 Metrostroi.AddPassSchemeTex("717_new", "Ruralline_1995", {"metrostroi_skins/81-717_schemes/717-ruralline_v3-map",})
 Metrostroi.AddPassSchemeTex("720", "Ruralline_1995", {"metrostroi_skins/81-720_schemes/720-linemap-ruralline-v3-left", "metrostroi_skins/81-720_schemes/720-linemap-ruralline-v3-right",})
 Metrostroi.AddPassSchemeTex("722", "Ruralline_1995", {"metrostroi_skins/81-722_schemes/ruralline_1995r", "metrostroi_skins/81-722_schemes/ruralline-1995",})
