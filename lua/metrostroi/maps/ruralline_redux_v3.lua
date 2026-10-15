@@ -877,6 +877,75 @@ Metrostroi.AddANSPAnnouncer("[ENG]LVP Announcer 1989 | Legacy announcer by Conco
     }
 })
 
+-- SARMAT / UPO2 announcer for 81-722, 81-723 and 81-724 trains.
+-- Reuses existing Ballistic recordings. V3 station IDs exclude the closed Ravenholm station.
+Metrostroi.AddSarmatUPOAnnouncer("[ENG] LVP announcer 1995 | Ballistic (SARMAT)", {
+    tone = {"subway_announcers/global-sounds/mireo_gong_01.mp3", 1.24},
+    odz = {"subway_announcers/global-sounds/doors_closing/old-doors.mp3", 4.54},
+    AVI = {"subway_announcers/ballistic_announcer/stations/aviation_university.mp3", 2.27},
+    CIT = {"subway_announcers/ballistic_announcer/stations/cityhall.mp3", 1.36},
+    MAR = {"subway_announcers/ballistic_announcer/stations/market_street.mp3", 1.28},
+    ROC = {"subway_announcers/ballistic_announcer/stations/rocklake.mp3", 1.10},
+    URB = {"subway_announcers/ballistic_announcer/stations/urban_park.mp3", 1.33},
+    WHI = {"subway_announcers/ballistic_announcer/stations/white_forest.mp3", 1.57},
+    NEXIS = {"subway_announcers/ballistic_announcer/special-files/the_next_station_is.mp3", 2.32},
+    THIIS = {"subway_announcers/ballistic_announcer/special-files/this_is.mp3", 1.33},
+    TERHE = {"subway_announcers/ballistic_announcer/special-files/this_train_terminates_here.mp3", 2.22},
+}, {
+    {
+        LED = {4, 7, 6, 5, 5, 5},
+        Name = "MT-4 Market St. Line",
+        Loop = false,
+        {
+            400, "Market Street", "Market Street",
+            arrlast = {nil, {"THIIS", "MAR", "TERHE"}},
+            dep = {{"NEXIS", "AVI"}, nil},
+            odz = "odz",
+            dist = 75,
+            right_doors = true,
+        },
+        {
+            402, "Aviation University", "Aviation University",
+            arr = {{ "THIIS", "AVI" }, { "THIIS", "AVI" }},
+            dep = {{ "NEXIS", "CIT" }, { "NEXIS", "MAR" }},
+            odz = "odz",
+            dist = 75,
+        },
+        {
+            403, "Lakeview City Hall", "Lakeview City Hall",
+            arr = {{ "THIIS", "CIT" }, { "THIIS", "CIT" }},
+            dep = {{ "NEXIS", "WHI" }, { "NEXIS", "AVI" }},
+            odz = "odz",
+            dist = 75,
+            right_doors = true,
+        },
+        {
+            404, "White Forest", "White Forest",
+            arr = {{ "THIIS", "WHI" }, { "THIIS", "WHI" }},
+            dep = {{ "NEXIS", "URB" }, { "NEXIS", "CIT" }},
+            odz = "odz",
+            dist = 75,
+            right_doors = true,
+        },
+        {
+            405, "Urban Park", "Urban Park",
+            arr = {{ "THIIS", "URB" }, { "THIIS", "URB" }},
+            dep = {{ "NEXIS", "ROC" }, { "NEXIS", "WHI" }},
+            odz = "odz",
+            dist = 75,
+            right_doors = true,
+        },
+        {
+            406, "Rocklake", "Rocklake",
+            arrlast = {{"THIIS", "ROC", "TERHE"}, nil},
+            dep = {nil, {"NEXIS", "URB"}},
+            odz = "odz",
+            dist = 75,
+            right_doors = true,
+        },
+    }
+})
+
 -- Station texture plates.
 -- 81-700 A type destination boards
 Metrostroi.AddLastStationTex("700", 999, "metrostroi_skins/destination_am/999-blank") -- Blank Texture.
