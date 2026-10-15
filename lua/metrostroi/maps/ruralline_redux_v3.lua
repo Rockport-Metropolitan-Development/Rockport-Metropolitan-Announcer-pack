@@ -877,8 +877,7 @@ Metrostroi.AddANSPAnnouncer("[ENG]LVP Announcer 1989 | Legacy announcer by Conco
     }
 })
 
--- SARMAT / UPO2 announcer for 81-722, 81-723 and 81-724 trains.
--- Reuses existing Ballistic recordings. V3 station IDs exclude the closed Ravenholm station.
+-- SARMAT announcer for 81-722, 81-723 and 81-724 trains.
 Metrostroi.AddSarmatUPOAnnouncer("[ENG] LVP announcer 1995 | Ballistic (SARMAT)", {
     tone = {"subway_announcers/global-sounds/mireo_gong_01.mp3", 1.24},
     odz = {"subway_announcers/global-sounds/doors_closing/old-doors.mp3", 4.54},
