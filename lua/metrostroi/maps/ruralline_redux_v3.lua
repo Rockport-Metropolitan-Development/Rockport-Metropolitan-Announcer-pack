@@ -16,6 +16,8 @@ print("RMDT Announcer loader: Valentin's announcer & routes (V3)")
 - 2.0s between special announcements when leaving stations.
 ]]
 -- //TODO Check on V3 platfroms what require "mind the gap" warning.
+
+-- Stations what need mind the gap:  aviation, White, Urban, 
 Metrostroi.AddANSPAnnouncer("[ENG + GER] LVP announcer 1995 | Valentin", {
     asnp = true,
     -- Announcer starting files
@@ -85,7 +87,7 @@ Metrostroi.AddANSPAnnouncer("[ENG + GER] LVP announcer 1995 | Valentin", {
         spec_wait = {"unss", 0.5, "unss_ger"},
         BlockDoors = true,
         {
-            900,
+            400,
             "Market St.",
             arrlast = {{nil}, {"ann_start", "ths", "market", "doors_right", 0.2, "ths_ger", "market_ger", "doors_right_ger", 0.2, "trhm", 0.2, "trhm_ger", 0.1, "click"}},
             dep = {{"doors_closing", 0.2, "doors_closing_ger", 0.5, "dro_cls", 1.0, "welc_lvp", "nx_st", "aviation", "platform_left", 0.5, "welc_lvp_ger", "nx_st_ger", "aviation_ger", "platform_left_ger", 1.0, "ravenholm_closed", 0.5, "ravenholm_closed_ger", 0.1, "click"}, {nil}},
@@ -93,7 +95,7 @@ Metrostroi.AddANSPAnnouncer("[ENG + GER] LVP announcer 1995 | Valentin", {
             right_doors = true,
         },
         {
-            902,
+            402,
             "Aviation Uni.",
             arr = {{"ann_start", "ths", "aviation", "doors_left", 0.2, "ths_ger", "aviation_ger", "doors_left_ger", 0.1, "click"}, {"ann_start", "ths", "aviation", "doors_left", 0.2, "ths_ger", "aviation_ger", "doors_left_ger", 0.1, "click"}},
             dep = {{"doors_closing", 0.2, "doors_closing_ger", 0.5, "dro_cls", 1.0, "nx_st", "city", "platform_right", 0.2, "nx_st_ger", "city_ger", "platform_right_ger", 0.1, "click"}, {"doors_closing", 0.2, "doors_closing_ger", 0.5, "dro_cls", 2.0, "nx_st", "market", "platform_right", 0.2, "nx_st_ger", "market_ger", "platform_right_ger", 2.0, "ravenholm_closed", 0.5, "ravenholm_closed_ger", 0.1, "click"}},
@@ -101,14 +103,14 @@ Metrostroi.AddANSPAnnouncer("[ENG + GER] LVP announcer 1995 | Valentin", {
             not_last = {2, "trhm", 0.2, "trhm_ger", "aviation"},
         },
         {
-            903,
+            403,
             "Lakeview Cth",
             arr = {{"ann_start", "ths", "city", "doors_right", 0.2, "ths_ger", "city_ger", "doors_right_ger", 0.1, "click"}, {"ann_start", "ths", "city", "doors_right", 0.2, "ths_ger", "city_ger", "doors_right_ger", 0.1, "click"}},
             dep = {{"doors_closing", 0.2, "doors_closing_ger", 0.5, "dro_cls", 1.0, "nx_st", "white", "platform_right", 0.2, "nx_st_ger", "white_ger", "platform_right_ger", 0.1, "click"}, {"doors_closing", 0.2, "doors_closing_ger", 0.5, "dro_cls", 1.0, "nx_st", "aviation", "platform_left", 0.2, "nx_st_ger", "aviation_ger", "platform_left_ger", 0.1, "click"}},
             right_doors = true,
         },
         {
-            904,
+            404,
             "White Forest",
             arr = {{"ann_start", "ths", "white", "doors_right", 0.2, "ths_ger", "white_ger", "doors_right_ger", 0.1, "click"}, {"ann_start", "ths", "white", "doors_right", 0.2, "ths_ger", "white_ger", "doors_right_ger", 0.1, "click"}},
             dep = {{"doors_closing", 0.2, "doors_closing_ger", 0.5, "dro_cls", 1.3, "nx_st", "urban", "platform_right", 0.2, "nx_st_ger", "urban_ger", "platform_right_ger", 0.1, "click"}, {"doors_closing", 0.2, "doors_closing_ger", 0.5, "dro_cls", 1.0, "nx_st", "city", "platform_right", 0.2, "nx_st_ger", "city_ger", "platform_right_ger", 0.1, "click"}},
@@ -117,7 +119,7 @@ Metrostroi.AddANSPAnnouncer("[ENG + GER] LVP announcer 1995 | Valentin", {
             right_doors = true,
         },
         {
-            905,
+            405,
             "Urban Park",
             arr = {{"ann_start", "ths", "urban", "doors_right", 0.2, "ths_ger", "urban_ger", "doors_right_ger", 0.1, "click"}, {"ann_start", "ths", "urban", "doors_right", 0.2, "ths_ger", "urban_ger", "doors_right_ger", "mind_gap_step_ger", 0.1, "click"}},
             dep = {{"doors_closing", 0.2, "doors_closing_ger", 0.5, "dro_cls", 2.0, "nx_st", "rocklake", "platform_right", 0.2, "nx_st_ger", "rocklake_ger", "platform_right_ger", 0.1, "click"}, {"doors_closing", 0.2, "doors_closing_ger", 0.5, "dro_cls", 1.5, "nx_st", "white", "platform_right", 0.2, "nx_st_ger", "white_ger", "platform_right_ger", 0.1, "click"}},
@@ -127,7 +129,7 @@ Metrostroi.AddANSPAnnouncer("[ENG + GER] LVP announcer 1995 | Valentin", {
             right_doors = true,
         },
         {
-            906,
+            406,
             "Rocklake",
             arrlast = {{"ann_start", "ths", "rocklake", "doors_right", 0.5, "rocklake_ger", "doors_right_ger", 0.2, "trhm", 0.2, "trhm_ger", 0.1, "click"}, {nil}},
             dep = {{nil}, {"doors_closing", 0.2, "doors_closing_ger", 0.5, "dro_cls", 1.0, "welc_lvp", "nx_st", "urban", "platform_right", 0.2, "welc_lvp_ger", "nx_st_ger", "urban_ger", "platform_right_ger", 0.1, "click"}},
@@ -173,7 +175,7 @@ Metrostroi.AddANSPAnnouncer("[ENG] LVP announcer 1995 | Marius", {
         spec_wait = {"terminal", "click"},
         BlockDoors = true,
         {
-            900,
+            400,
             "Market St.",
             arrlast = {{nil}, {"chime", "market", "terminal", "drc_rh", 1.0, "click"}},
             dep = {{"drc_cls", 2.0, "rh_pass", 1.0, "click"}, {nil}},
@@ -181,7 +183,7 @@ Metrostroi.AddANSPAnnouncer("[ENG] LVP announcer 1995 | Marius", {
             right_doors = true,
         },
         {
-            902,
+            402,
             "Aviation Uni.",
             arr = {{"chime", "aviation", "drc_lf", 1.0, "click"}, {"chime", "aviation", "drc_lf", 1.0, "click"}},
             dep = {{"drc_cls", 1.0, "click"}, {"drc_cls", 1.0, "click"}},
@@ -189,14 +191,14 @@ Metrostroi.AddANSPAnnouncer("[ENG] LVP announcer 1995 | Marius", {
             not_last = {2, "terminal", "aviation", 1.0, "click"},
         },
         {
-            903,
+            403,
             "Lakeview Cth",
             arr = {{"chime", "city", "drc_rh", 1.0, "click"}, {"chime", "city", "drc_rh", 1.0, "click"}},
             dep = {{"drc_cls", 1.0, "click"}, {"drc_cls", 1.0, "click"}},
             right_doors = true,
         },
         {
-            902,
+            404,
             "White Forest",
             arr = {{"chime", "white", "drc_rh", 1.0, "click"}, {"chime", "white", "drc_rh", 1.0, "click"}},
             dep = {{"drc_cls", 1.0, "click"}, {"drc_cls", 1.0, "click"}},
@@ -205,7 +207,7 @@ Metrostroi.AddANSPAnnouncer("[ENG] LVP announcer 1995 | Marius", {
             right_doors = true,
         },
         {
-            902,
+            405,
             "Urban Park",
             arr = {{"chime", "urban", "drc_rh", 1.0, "click"}, {"chime", "urban", "drc_rh", 1.0, "click"}},
             dep = {{"drc_cls", 1.0, "click"}, {"drc_cls", 1.0, "click"}},
@@ -215,7 +217,7 @@ Metrostroi.AddANSPAnnouncer("[ENG] LVP announcer 1995 | Marius", {
             right_doors = true,
         },
         {
-            902,
+            406,
             "Rocklake",
             arrlast = {{"chime", "rocklake", "terminal", "drc_rh", 1.0, "click"}, {nil}},
             dep = {{nil}, {"drc_cls", 1.0, "click"}},
@@ -243,7 +245,7 @@ Metrostroi.AddANSPAnnouncer("[PL + ENG] LVP announcer 1995 | NorwayLCAndTrains",
     city = {"subway_announcers/v3_announcers/norwaylcandtrains_announcer/station - lakeview city hall.mp3", 5.25},
     white = {"subway_announcers/v3_announcers/norwaylcandtrains_announcer/station - white forest.mp3", 4.43},
     urban = {"subway_announcers/v3_announcers/norwaylcandtrains_announcer/station - urban park.mp3", 4.55},
-    rocklake = {"subway_announcers/v3_announcers/norwaylcandtrains_announcer/next - rocklake.mp3", 12.10},
+    rocklake = {"subway_announcers/v3_announcers/norwaylcandtrains_announcer/station - rocklake.mp3", 12.10},
     -- Special announcers
     nxt_market = {"subway_announcers/v3_announcers/norwaylcandtrains_announcer/next - market street.mp3", 6.15},
     nxt_aviation = {"subway_announcers/v3_announcers/norwaylcandtrains_announcer/next - aviation university.mp3", 7.00},
@@ -260,7 +262,7 @@ Metrostroi.AddANSPAnnouncer("[PL + ENG] LVP announcer 1995 | NorwayLCAndTrains",
         spec_wait = {"ann_start", "click"},
         BlockDoors = true,
         {
-            900,
+            400,
             "Market St.",
             arrlast = {{nil}, {"ann_start", "market", 0.3, "click"}},
             dep = {{"dro_cls", 1.0, "nxt_aviation", "click"}, {nil}},
@@ -268,41 +270,41 @@ Metrostroi.AddANSPAnnouncer("[PL + ENG] LVP announcer 1995 | NorwayLCAndTrains",
             right_doors = true,
         },
         {
-            902,
+            402,
             "Aviation Uni.",
             arr = {{"ann_start", "aviation", "click"}, {"ann_start", "aviation", "click"}},
             dep = {{"dro_cls", 1.0, "nxt_city", "click"}, {"dro_cls", 1.0, "nxt_market", "click"}},
             arrlast = {{nil}, {"ann_start", "aviation", "click"}},
-            not_last = {2, "terminal", "urban", 1.0, "click"},
+            not_last = {2, "urban", 1.0, "click"},
         },
         {
-            903,
+            403,
             "Lakeview Cth",
             arr = {{"ann_start", "city", "click"}, {"ann_start", "city", "click"}},
             dep = {{"dro_cls", 1.0, "nxt_white", "click"}, {"dro_cls", 1.0, "nxt_aviation", "click"}},
             right_doors = true,
         },
         {
-            904,
+            404,
             "White Forest",
             arr = {{"ann_start", "white", "click"}, {"ann_start", "white", "click"}},
             dep = {{"dro_cls", 1.0, "nxt_urban", "click"}, {"dro_cls", 1.0, "nxt_city", "click"}},
             arrlast = {{"ann_start", "white", "click"}, {"ann_start", "white", "click"}},
-            not_last = {2, "terminal", "urban", 1.0, "click"},
+            not_last = {2, "urban", 1.0, "click"},
             right_doors = true,
         },
         {
-            905,
+            405,
             "Urban Park",
             arr = {{"ann_start", "urban", "click"}, {"ann_start", "urban", "click"}},
-            dep = {{"dro_cls", 1.0, "nxt_rock", "click"}, {"dro_cls", 1.0, "next_white", "click"}},
+            dep = {{"dro_cls", 1.0, "nxt_rock", "click"}, {"dro_cls", 1.0, "net_white", "click"}},
             arrlast = {{"ann_start", "urban", "click"}, {"ann_start", "urban", "click"}},
-            not_last = {2, "terminal", "urban", 1.0, "click"},
+            not_last = {2, "urban", 1.0, "click"},
             have_inrerchange = true,
             right_doors = true,
         },
         {
-            906,
+            406,
             "Rocklake",
             arrlast = {{"ann_start", "rocklake", "click"}, {nil}},
             dep = {{nil}, {"dro_cls", 1.0, "nxt_urban", "click"}},
@@ -312,108 +314,125 @@ Metrostroi.AddANSPAnnouncer("[PL + ENG] LVP announcer 1995 | NorwayLCAndTrains",
     }
 })
 
--- Tankict announcer
+-- Tankict bilingual English/Russian ASNP announcer
 Metrostroi.AddANSPAnnouncer("[ENG + RU] LVP announcer 1995 | Tankict", {
     asnp = true,
-    -- Announcer starting files
     ann_start = {"subway_announcers/global-sounds/mireo_gong_01.mp3", 1.24},
     click = {"subway_announcers/global-sounds/rri-click.mp3", 0.31},
     click1 = {"subway_announcers/asnp/click.mp3", 0.30},
     click2 = {"subway_announcers/asnp/click2.mp3", 0.10},
-    announcer_ready = {"subway_announcers/global-sounds/mireo_gong_01.mp3", 1.24},
-    -- Doors closing
     dro_cls = {"subway_announcers/global-sounds/doors_closing/old-doors.mp3", 4.54},
-    --dro_cls = {"subway_announcers/global-sounds/doors_closing/futr-doors.mp3",2.40},
-    --dro_cls = {"subway_announcers/global-sounds/doors_closing/tape-doors.mp3",4.25},
-    -- Normal Announcer files (english)
-    market = {"subway_announcers/v3_announcers/tankict_announcer/en/stations/market_street_eng.mp3", 1.47},
-    aviation = {"subway_announcers/v3_announcers/tankict_announcer/en/stations/aviation_university_eng.mp3", 2.44},
-    city = {"subway_announcers/v3_announcers/tankict_announcer/en/stations/lakeview_city_hall_eng.mp3", 1.77},
-    white = {"subway_announcers/v3_announcers/tankict_announcer/en/stations/white_forest_eng.mp3", 1.54},
-    urban = {"subway_announcers/v3_announcers/tankict_announcer/en/stations/urban_park_eng.mp3", 2.10},
-    rock = {"subway_announcers/v3_announcers/tankict_announcer/en/stations/rocklake_eng.mp3", 1.44},
-    -- Special announcers (English)
-    train_goes = {"subway_announcers/v3_announcers/tankict_announcer/en/special/train_goes_to_eng.mp3", 2.38},
-    doors_close = {"subway_announcers/v3_announcers/tankict_announcer/en/special/doors_are_closing_eng.mp3", 2.28},
-    nxt_st = {"subway_announcers/v3_announcers/tankict_announcer/en/special/next_station_eng.mp3", 1.52},
-    mind_gap = {"subway_announcers/v3_announcers/tankict_announcer/en/special/mind_the_gap_eng.mp3", 3.37},
-    st_end = {"subway_announcers/v3_announcers/tankict_announcer/en/special/end_station_eng.mp3", 3.72},
-    stuff = {"subway_announcers/v3_announcers/tankict_announcer/en/special/dont_forget_your_stuff_eng.mp3", 4.57},
-    polite = {"subway_announcers/v3_announcers/tankict_announcer/en/special/be_mutually_polite_eng.mp3", 8.51},
-    arrival_end = {"subway_announcers/v3_announcers/tankict_announcer/en/special/arrival_to_end_eng.mp3", 8.56},
-    arrival = {"subway_announcers/v3_announcers/tankict_announcer/en/special/arrival_eng.mp3", 0.80},
-    -- Normal Announcer files (Russian)
-    market_ru = {"subway_announcers/v3_announcers/tankict_announcer/ru/stations/market_street.mp3", 1.73},
-    aviation_ru = {"subway_announcers/v3_announcers/tankict_announcer/ru/stations/aviation_university.mp3", 2.77},
-    city_ru = {"subway_announcers/v3_announcers/tankict_announcer/ru/stations/lakeview_city_hall.mp3", 2.32},
-    white_ru = {"subway_announcers/v3_announcers/tankict_announcer/ru/stations/white_forest.mp3", 1.71},
-    urban_ru = {"subway_announcers/v3_announcers/tankict_announcer/ru/stations/urban_park.mp3",},
-    rock_ru = {"subway_announcers/v3_announcers/tankict_announcer/ru/stations/rocklake.mp3", 1.64},
-    -- Special announcers (Russian)
-    train_goes_ru = {"subway_announcers/v3_announcers/tankict_announcer/ru/special/train_goes_to.mp3", 2.79},
-    nxt_st_ru = {"subway_announcers/v3_announcers/tankict_announcer/ru/special/next_station_ru.mp3", 1.42},
-    doors_close_ru = {"subway_announcers/v3_announcers/tankict_announcer/ru/special/doors_closing_ru.mp3", 2.13},
-    mind_gap_ru = {"subway_announcers/v3_announcers/tankict_announcer/ru/special/mind_the_gap.mp3", 5.13},
-    st_end_ru = {"subway_announcers/v3_announcers/tankict_announcer/ru/special/end_station.mp3", 8.17},
-    stuff_ru = {"subway_announcers/v3_announcers/tankict_announcer/ru/special/dont_forget_your_stuff.mp3", 4.68},
-    polite_ru = {"subway_announcers/v3_announcers/tankict_announcer/ru/special/be_mutually_polite.mp3", 8.41},
-    arrival_end_ru = {"subway_announcers/v3_announcers/tankict_announcer/ru/special/arrival_to_end.mp3", 8.35},
-    arrival_ru = {"subway_announcers/v3_announcers/tankict_announcer/ru/special/arrival.mp3", 1.14},
+    -- 320 kbps MP3 timings estimated from sizes; validate playback in-game.
+    announcer_ready = {"subway_announcers/v3_announcers/tankict_announcer/eng/announcer_ready.mp3", 2.81},
+    eng_arr_aviation_university = {"subway_announcers/v3_announcers/tankict_announcer/eng/arr_aviation_university.mp3", 4.38},
+    eng_arr_lakeview_city_hall = {"subway_announcers/v3_announcers/tankict_announcer/eng/arr_lakeview_city_hall.mp3", 4.43},
+    eng_arr_market_street = {"subway_announcers/v3_announcers/tankict_announcer/eng/arr_market_street.mp3", 5.30},
+    eng_arr_rocklake = {"subway_announcers/v3_announcers/tankict_announcer/eng/arr_rocklake.mp3", 3.28},
+    eng_arr_urban_park = {"subway_announcers/v3_announcers/tankict_announcer/eng/arr_urban_park.mp3", 3.44},
+    eng_arr_white_forest = {"subway_announcers/v3_announcers/tankict_announcer/eng/arr_white_forest.mp3", 3.41},
+    eng_market_street = {"subway_announcers/v3_announcers/tankict_announcer/eng/market_street.mp3", 1.22},
+    eng_next_aviation_university = {"subway_announcers/v3_announcers/tankict_announcer/eng/next_aviation_university.mp3", 5.22},
+    eng_next_aviation_university_via_ravenholm = {"subway_announcers/v3_announcers/tankict_announcer/eng/next_aviation_university_via_ravenholm.mp3", 9.55},
+    eng_next_lakeview_city_hall = {"subway_announcers/v3_announcers/tankict_announcer/eng/next_lakeview_city_hall.mp3", 5.32},
+    eng_next_market_street_via_ravenholm = {"subway_announcers/v3_announcers/tankict_announcer/eng/next_market_street_via_ravenholm.mp3", 8.46},
+    eng_next_rocklake = {"subway_announcers/v3_announcers/tankict_announcer/eng/next_rocklake.mp3", 4.28},
+    eng_next_urban_park = {"subway_announcers/v3_announcers/tankict_announcer/eng/next_urban_park.mp3", 4.51},
+    eng_next_white_forest = {"subway_announcers/v3_announcers/tankict_announcer/eng/next_white_forest.mp3", 4.38},
+    eng_rocklake = {"subway_announcers/v3_announcers/tankict_announcer/eng/rocklake.mp3", 1.09},
+    eng_spec_belongings = {"subway_announcers/v3_announcers/tankict_announcer/eng/spec_belongings.mp3", 4.67},
+    eng_spec_deadlock = {"subway_announcers/v3_announcers/tankict_announcer/eng/spec_deadlock.mp3", 7.31},
+    eng_spec_depart = {"subway_announcers/v3_announcers/tankict_announcer/eng/spec_depart.mp3", 4.25},
+    eng_spec_end_station = {"subway_announcers/v3_announcers/tankict_announcer/eng/spec_end_station.mp3", 3.52},
+    eng_spec_exit = {"subway_announcers/v3_announcers/tankict_announcer/eng/spec_exit.mp3", 4.33},
+    eng_spec_handrail = {"subway_announcers/v3_announcers/tankict_announcer/eng/spec_handrail.mp3", 4.36},
+    eng_spec_objects = {"subway_announcers/v3_announcers/tankict_announcer/eng/spec_objects.mp3", 4.69},
+    eng_spec_polite = {"subway_announcers/v3_announcers/tankict_announcer/eng/spec_polite.mp3", 8.25},
+    eng_spec_stop = {"subway_announcers/v3_announcers/tankict_announcer/eng/spec_stop.mp3", 4.64},
+    eng_to_aviation_university = {"subway_announcers/v3_announcers/tankict_announcer/eng/to_aviation_university.mp3", 4.51},
+    eng_to_urban_park = {"subway_announcers/v3_announcers/tankict_announcer/eng/to_urban_park.mp3", 3.70},
+    eng_to_white_forest = {"subway_announcers/v3_announcers/tankict_announcer/eng/to_white_forest.mp3", 3.49},
+    eng_urban_park = {"subway_announcers/v3_announcers/tankict_announcer/eng/urban_park.mp3", 1.38},
+    eng_white_forest = {"subway_announcers/v3_announcers/tankict_announcer/eng/white_forest.mp3", 1.09},
+    ru_arr_aviation_university = {"subway_announcers/v3_announcers/tankict_announcer/ru/arr_aviation_university.mp3", 3.70},
+    ru_arr_lakeview_city_hall = {"subway_announcers/v3_announcers/tankict_announcer/ru/arr_lakeview_city_hall.mp3", 3.13},
+    ru_arr_market_street = {"subway_announcers/v3_announcers/tankict_announcer/ru/arr_market_street.mp3", 5.37},
+    ru_arr_rocklake = {"subway_announcers/v3_announcers/tankict_announcer/ru/arr_rocklake.mp3", 2.37},
+    ru_arr_urban_park = {"subway_announcers/v3_announcers/tankict_announcer/ru/arr_urban_park.mp3", 2.84},
+    ru_arr_white_forest = {"subway_announcers/v3_announcers/tankict_announcer/ru/arr_whie_forest.mp3", 2.63},
+    ru_next_aviation_university = {"subway_announcers/v3_announcers/tankict_announcer/ru/next_aviation_university.mp3", 3.41},
+    ru_next_aviation_university_via_ravenholm = {"subway_announcers/v3_announcers/tankict_announcer/ru/next_aviation_university_via_ravenholm.mp3", 8.43},
+    ru_next_lakeview_city_hall = {"subway_announcers/v3_announcers/tankict_announcer/ru/next_lakeview_city_hall.mp3", 2.97},
+    ru_next_market_street_via_ravenholm = {"subway_announcers/v3_announcers/tankict_announcer/ru/next_market_street_via_ravenholm.mp3", 6.94},
+    ru_next_rocklake = {"subway_announcers/v3_announcers/tankict_announcer/ru/next_rocklake.mp3", 2.68},
+    ru_next_urban_park = {"subway_announcers/v3_announcers/tankict_announcer/ru/next_urban_park.mp3", 2.40},
+    ru_next_white_forest = {"subway_announcers/v3_announcers/tankict_announcer/ru/next_white_forest.mp3", 2.66},
+    ru_spec_belongings = {"subway_announcers/v3_announcers/tankict_announcer/ru/spec_belongings.mp3", 4.38},
+    ru_spec_deadlock = {"subway_announcers/v3_announcers/tankict_announcer/ru/spec_deadlock.mp3", 7.07},
+    ru_spec_depart = {"subway_announcers/v3_announcers/tankict_announcer/ru/spec_depart.mp3", 4.28},
+    ru_spec_end_station = {"subway_announcers/v3_announcers/tankict_announcer/ru/spec_end_station.mp3", 4.62},
+    ru_spec_exit = {"subway_announcers/v3_announcers/tankict_announcer/ru/spec_exit.mp3", 4.62},
+    ru_spec_handrail = {"subway_announcers/v3_announcers/tankict_announcer/ru/spec_handrail.mp3", 4.09},
+    ru_spec_objects = {"subway_announcers/v3_announcers/tankict_announcer/ru/spec_objects.mp3", 4.59},
+    ru_spec_polite = {"subway_announcers/v3_announcers/tankict_announcer/ru/spec_polite.mp3", 9.55},
+    ru_spec_stop = {"subway_announcers/v3_announcers/tankict_announcer/ru/spec_stop.mp3", 5.30},
+    ru_to_aviation_university = {"subway_announcers/v3_announcers/tankict_announcer/ru/to_aviation_university.mp3", 5.09},
+    ru_to_urban_park = {"subway_announcers/v3_announcers/tankict_announcer/ru/to_urban_park.mp3", 4.22},
+    ru_to_white_forest = {"subway_announcers/v3_announcers/tankict_announcer/ru/to_white_forest.mp3", 3.99},
 }, {
     {
         LED = {3, 8, 5, 5, 4, 5},
-        Name = "Line M52 MS - RL",
+        Name = "MT-4 Market St. Line",
         Loop = false,
-        spec_last = {"ann_start", "st_end", "st_end_ru", "click"},
-        spec_wait = {"ann_start", "click"},
+        spec_last = {"eng_spec_end_station", 0.35, "ru_spec_end_station", 0.3, "click"},
+        spec_wait = {"eng_spec_stop", 0.35, "ru_spec_stop", 0.3, "click"},
         BlockDoors = true,
         {
-            900,
+            400,
             "Market St.",
-            arrlast = {{nil}, {"ann_start", "arrival_end", "market", 0.5, "arrival_end_ru", "market_ru", 0.3, "click"}},
-            dep = {{"doors_close", 0.1, "doors_close_ru", 0.4, "dro_cls", 2.0, "nxt_st", "aviation", 0.3, "nxt_st_ru", "aviation_ru", 0.5, "train_goes", "rock", 0.3, "train_goes_ru", "rock_ru", 0.3, "click"}, {nil}},
+            arrlast = {{nil}, {"ann_start", "eng_arr_market_street", 0.35, "ru_arr_market_street", 0.35, "eng_spec_end_station", 0.35, "ru_spec_end_station", 0.3, "click"}},
+            dep = {{"dro_cls", 1.0, "eng_next_aviation_university_via_ravenholm", 0.35, "ru_next_aviation_university_via_ravenholm", 0.3, "click"}, {nil}},
             have_inrerchange = true,
             right_doors = true,
         },
         {
-            902,
+            402,
             "Aviation Uni.",
-            arr = {{"ann_start", "arrival", "aviation", 0.5, "arrival_ru", "aviation_ru", 0.3, "click"}, {"ann_start", "arrival", "aviation", 0.5, "arrival_ru", "aviation_ru", 0.3, "click"}},
-            dep = {{"doors_close", 0.1, "doors_close_ru", 0.4, "dro_cls", 1.0, "nxt_st", "city", 0.3, "nxt_st_ru", "city_ru", 0.3, "click"}, {"doors_close", 0.1, "doors_close_ru", 0.4, "dro_cls", 2.0, "nxt_st", "market", 0.3, "nxt_st_ru", "market_ru", 0.3, "click"}},
-            arrlast = {{nil}, {"ann_start", "arrival_end", "aviation", 0.3, "arrival_end_ru", "aviation_ru", 0.3, "click"}},
-            not_last = {2, "st_end", "aviation", 0.3, "st_end_ru", "aviation_ru", 0.3, "click"},
+            arr = {{"ann_start", "eng_arr_aviation_university", 0.35, "ru_arr_aviation_university", 0.3, "click"}, {"ann_start", "eng_arr_aviation_university", 0.35, "ru_arr_aviation_university", 0.3, "click"}},
+            dep = {{"dro_cls", 1.0, "eng_next_lakeview_city_hall", 0.35, "ru_next_lakeview_city_hall", 0.3, "click"}, {"dro_cls", 1.0, "eng_next_market_street_via_ravenholm", 0.35, "ru_next_market_street_via_ravenholm", 0.3, "click"}},
+            arrlast = {{nil}, {"ann_start", "eng_arr_aviation_university", 0.35, "ru_arr_aviation_university", 0.35, "eng_spec_end_station", 0.35, "ru_spec_end_station", 0.3, "click"}},
+            not_last = {2, "eng_to_aviation_university", 0.3, "ru_to_aviation_university", 0.3, "click"},
         },
         {
-            903,
+            403,
             "Lakeview Cth",
-            arr = {{"ann_start", "arrival", "city", 0.3, "arrival_ru", "city_ru", 0.3, "click"}, {"ann_start", "arrival", "city", 0.3, "arrival_ru", "city_ru", 0.3, "click"}},
-            dep = {{"doors_close", 0.1, "doors_close_ru", 0.4, "dro_cls", 1.0, "nxt_st", "white", 0.3, "nxt_st_ru", "white_ru", 0.3, "click"}, {"doors_close", 0.1, "doors_close_ru", 0.4, "dro_cls", 1.0, "nxt_st", "aviation", 0.3, "nxt_st_ru", "aviation_ru", 0.3, "click"}},
+            arr = {{"ann_start", "eng_arr_lakeview_city_hall", 0.35, "ru_arr_lakeview_city_hall", 0.3, "click"}, {"ann_start", "eng_arr_lakeview_city_hall", 0.35, "ru_arr_lakeview_city_hall", 0.3, "click"}},
+            dep = {{"dro_cls", 1.0, "eng_next_white_forest", 0.35, "ru_next_white_forest", 0.3, "click"}, {"dro_cls", 1.0, "eng_next_aviation_university", 0.35, "ru_next_aviation_university", 0.3, "click"}},
             right_doors = true,
         },
         {
-            904,
+            404,
             "White Forest",
-            arr = {{"ann_start", "arrival", "white", "arrival_ru", "white_ru", 0.3, "click"}, {"ann_start", "arrival", "white", "arrival_ru", "white_ru", 0.3, "click"}},
-            dep = {{"doors_close", 0.1, "doors_close_ru", 0.4, "dro_cls", 1.0, "nxt_st", "urban", 0.3, "nxt_st_ru", "city_ru", 0.3, "train_goes", "rock", 0.3, "train_goes_ru", "rock_ru", 0.3, "click"}, {"doors_close", 0.1, "doors_close_ru", 0.4, "dro_cls", 1.0, "nxt_st", "city", 0.3, "next_st", "city_ru", 0.3, "train_goes", "market", 0.3, "train_goes_ru", "market_ru", 0.3, "click"}},
-            arrlast = {{"ann_start", "arrival_end", "white", 0.3, "arrival_end_ru", "white_ru", 0.3, "click"}, {"ann_start", "arrival_end", "white", 0.3, "arrival_end_ru", "white_ru", 0.3, "click"}},
-            not_last = {2, "st_end", "white", 0.3, "st_end_ru", "white_ru", 0.3, "click"},
+            arr = {{"ann_start", "eng_arr_white_forest", 0.35, "ru_arr_white_forest", 0.3, "click"}, {"ann_start", "eng_arr_white_forest", 0.35, "ru_arr_white_forest", 0.3, "click"}},
+            dep = {{"dro_cls", 1.0, "eng_next_urban_park", 0.35, "ru_next_urban_park", 0.3, "click"}, {"dro_cls", 1.0, "eng_next_lakeview_city_hall", 0.35, "ru_next_lakeview_city_hall", 0.3, "click"}},
+            arrlast = {{"ann_start", "eng_arr_white_forest", 0.35, "ru_arr_white_forest", 0.35, "eng_spec_end_station", 0.35, "ru_spec_end_station", 0.3, "click"}, {"ann_start", "eng_arr_white_forest", 0.35, "ru_arr_white_forest", 0.35, "eng_spec_end_station", 0.35, "ru_spec_end_station", 0.3, "click"}},
+            not_last = {2, "eng_to_white_forest", 0.3, "ru_to_white_forest", 0.3, "click"},
             right_doors = true,
         },
         {
-            905,
+            405,
             "Urban Park",
-            arr = {{"ann_start", "arrival", "urban", 0.3, "arrival_ru", "urban_ru", 0.3, "click"}, {"ann_start", "arrival", "urban", 0.3, "urban_ru", "aviation_ru", 0.3, "click"}},
-            dep = {{"doors_close", 0.1, "doors_close_ru", 0.4, "dro_cls", 2.0, "nxt_st", "rock", 0.3, "nxt_st_ru", "rock_ru", 0.3, "click"}, {"doors_close", 0.1, "doors_close_ru", 0.4, "dro_cls", 1.0, "nxt_st", "white", 0.3, "nxt_st_ru", "white_ru", 0.3, "click"}},
-            arrlast = {{"ann_start", "arrival", "urban", 0.3, "arrival_ru", "urban_ru", 0.3, "click"}, {nil}},
-            not_last = {2, "st_end", "urban", 0.3, "st_end_ru", "urban_ru", 0.3, "click"},
+            arr = {{"ann_start", "eng_arr_urban_park", 0.35, "ru_arr_urban_park", 0.3, "click"}, {"ann_start", "eng_arr_urban_park", 0.35, "ru_arr_urban_park", 0.3, "click"}},
+            dep = {{"dro_cls", 1.0, "eng_next_rocklake", 0.35, "ru_next_rocklake", 0.3, "click"}, {"dro_cls", 1.0, "eng_next_white_forest", 0.35, "ru_next_white_forest", 0.3, "click"}},
+            arrlast = {{"ann_start", "eng_arr_urban_park", 0.35, "ru_arr_urban_park", 0.35, "eng_spec_end_station", 0.35, "ru_spec_end_station", 0.3, "click"}, {"ann_start", "eng_arr_urban_park", 0.35, "ru_arr_urban_park", 0.35, "eng_spec_end_station", 0.35, "ru_spec_end_station", 0.3, "click"}},
+            not_last = {2, "eng_to_urban_park", 0.3, "ru_to_urban_park", 0.3, "click"},
             have_inrerchange = true,
             right_doors = true,
         },
         {
-            906,
+            406,
             "Rocklake",
-            arrlast = {{"ann_start", "arrival_end", "rock", 0.3, "arrival_end_ru", "rock_ru"}, {nil}},
-            dep = {{nil}, {"doors_close", 0.1, "doors_close_ru", 0.4, "dro_cls", 2.0, "nxt_st", "urban", 0.3, "nxt_st_ru", "urban_ru", 0.3, "train_goes", "market", 0.3, "train_goes_ru", "market_ru", 0.3, "click"}},
+            arrlast = {{"ann_start", "eng_arr_rocklake", 0.35, "ru_arr_rocklake", 0.35, "eng_spec_end_station", 0.35, "ru_spec_end_station", 0.3, "click"}, {nil}},
+            dep = {{nil}, {"dro_cls", 1.0, "eng_next_urban_park", 0.35, "ru_next_urban_park", 0.3, "click"}},
             have_inrerchange = true,
             right_doors = true,
         }
@@ -460,7 +479,7 @@ Metrostroi.AddANSPAnnouncer("[ENG] LVP announcer 1995 | Rekrut Kurbel", {
         spec_wait = {{"spec_train_stop"}, {"spec_train_depart"}},
         BlockDoors = true,
         {
-            900,
+            400,
             "Market St.",
             arrlast = {{nil}, {"station", "MS", "platformR", "terminates_here", 0.1, "spec_belongings"}, "MS"},
             dep = {{"doors_closing", 0.25, "next_station", "AV", 0.1, "spec_handrails"}, {nil}},
@@ -468,7 +487,7 @@ Metrostroi.AddANSPAnnouncer("[ENG] LVP announcer 1995 | Rekrut Kurbel", {
             right_doors = true,
         },
         {
-            902,
+            402,
             "Aviation Uni.",
             arr = {{"station", "AV", "platformL"}, {"station", "AV", "platformL"}},
             dep = {{"doors_closing", 0.25, "next_station", "CH"}, {"doors_closing", 0.25, "next_station", "MS", 0.1, "spec_handrails"}},
@@ -476,14 +495,14 @@ Metrostroi.AddANSPAnnouncer("[ENG] LVP announcer 1995 | Rekrut Kurbel", {
             not_last = {2, "terminates_at", "AV"},
         },
         {
-            903,
+            403,
             "Lakeview Cth",
             arr = {{"station", "CH", "platformR", 0.1, "spec_belongings"}, {"station", "CH", "platformR", 0.1, "spec_belongings"}},
             dep = {{"doors_closing", 0.25, "next_station", "WF", 0.1, "spec_emergency"}, {"doors_closing", 0.25, "next_station", "AV"}},
             right_doors = true,
         },
         {
-            904,
+            404,
             "White Forest",
             arr = {{"station", "WF", "platformR"}, {"station", "WF", "platformR"}},
             dep = {{"doors_closing", 0.25, "next_station", "UP"}, {"doors_closing", 0.25, "next_station", "CH", 0.1, "spec_emergency"}},
@@ -492,7 +511,7 @@ Metrostroi.AddANSPAnnouncer("[ENG] LVP announcer 1995 | Rekrut Kurbel", {
             right_doors = true,
         },
         {
-            905,
+            405,
             "Urban Park",
             arr = {{"station", "UP", "platformR"}, {"station", "UP", "platformR"}},
             dep = {{"doors_closing", 0.25, "next_station", "RL", 0.1, "spec_handrails"}, {"doors_closing", 0.25, "next_station", "WF"}},
@@ -502,173 +521,12 @@ Metrostroi.AddANSPAnnouncer("[ENG] LVP announcer 1995 | Rekrut Kurbel", {
             right_doors = true,
         },
         {
-            906,
+            406,
             "Rocklake",
             arrlast = {{"station", "RL", "platformR", "terminates_here", 0.1, "spec_belongings"}, {nil}, "RL"},
             dep = {{nil}, {"doors_closing", 0.25, "next_station", "UP", 0.1, "spec_handrails"}},
             have_inrerchange = true,
             right_doors = true,
-        }
-    }
-})
-
--- Old / Legacy versions (semi-supportive of V3)
--- trocki_announcer
-Metrostroi.AddANSPAnnouncer("[ENG] LVP announcer 1995 | Trocki", {
-    asnp = true,
-    -- Announcer starting files
-    ann_start = {"subway_announcers/global-sounds/mireo_gong_01.mp3", 1.24},
-    click = {"subway_announcers/global-sounds/rri-click.mp3", 0.31},
-    click1 = {"subway_announcers/asnp/click.mp3", 0.30},
-    click2 = {"subway_announcers/asnp/click2.mp3", 0.10},
-    announcer_ready = {"subway_announcers/global-sounds/mireo_gong_01.mp3", 1.24},
-    -- Doors closing
-    dro_cls = {"subway_announcers/global-sounds/doors_closing/old-doors.mp3", 4.54},
-    --dro_cls = {"subway_announcers/global-sounds/doors_closing/futr-doors.mp3",2.40},
-    --dro_cls = {"subway_announcers/global-sounds/doors_closing/tape-doors.mp3",4.25},
-    -- Normal Announcer files
-    spc1 = {"subway_announcers/legacy_announcers_v29/trocki_announcer/special_1.mp3", 4.15},
-    fault = {"subway_announcers/legacy_announcers_v29/trocki_announcer/special_2.mp3", 4.60},
-    tis = {"subway_announcers/legacy_announcers_v29/trocki_announcer/this_is_station.mp3", 1.41},
-    eol = {"subway_announcers/legacy_announcers_v29/trocki_announcer/end_of_line.mp3", 3.32},
-    next_st = {"subway_announcers/legacy_announcers_v29/trocki_announcer/next_station.mp3", 2.17},
-    market = {"subway_announcers/legacy_announcers_v29/trocki_announcer/market_street.mp3", 1.88},
-    aviation = {"subway_announcers/legacy_announcers_v29/trocki_announcer/aviation.mp3", 2.12},
-    city = {"subway_announcers/legacy_announcers_v29/trocki_announcer/city_hall.mp3", 1.75},
-    white = {"subway_announcers/legacy_announcers_v29/trocki_announcer/white_forest.mp3", 1.85},
-    urban = {"subway_announcers/legacy_announcers_v29/trocki_announcer/urban_park.mp3", 1.59},
-    rocklake = {"subway_announcers/legacy_announcers_v29/trocki_announcer/rocklake.mp3", 1.38},
-}, {
-    {
-        LED = {3, 8, 5, 5, 4, 5},
-        Name = "MT-4 Market St. Line",
-        Loop = false,
-        spec_last = {"ann_start", "click"},
-        spec_wait = {"ann_start", "fault"},
-        BlockDoors = true,
-        {
-            900,
-            "Market St.",
-            arrlast = {{nil}, {"ann_start", "tis", "market", 0.3, "eol", 0.3, "spec1", "click"}},
-            dep = {{"ann_start", "dro_cls", 1.0, "next_st", "aviation", "click"}, {nil}},
-            have_inrerchange = true,
-            right_doors = true,
-        },
-        {
-            902,
-            "Aviation Uni.",
-            arr = {{"ann_start", "tis", "aviation", "click"}, {"ann_start", "tis", "aviation", "click"}},
-            dep = {{"ann_start", "dro_cls", 1.0, "next_st", "city", "click"}, {"ann_start", "dro_cls", 1.0, "next_st", "market", "click"}},
-            arrlast = {{"ann_start", "tis", "aviation", "eol", "spec1", "click"}, {"ann_start", "tis", "aviation", "eol", "spec1", "click"}},
-            not_last = {2, "eol", "aviation"},
-        },
-        {
-            903,
-            "Lakeview Cth",
-            arr = {{"ann_start", "tis", "city", "click"}, {"ann_start", "tis", "city", "click"}},
-            dep = {{"ann_start", "dro_cls", 0.5, "next_st", "white", "click"}, {"ann_start", "dro_cls", 0.5, "next_st", "aviation", "click"}},
-            right_doors = true,
-        },
-        {
-            904,
-            "White Forest",
-            arr = {{"ann_start", "tis", "white", "click"}, {"ann_start", "tis", "white", "click"}},
-            dep = {{"ann_start", "dro_cls", 1.0, "next_st", "urban", "click"}, {"ann_start", "dro_cls", 1.0, "next_st", "city", "click"}},
-            arrlast = {{"ann_start", "tis", "white", 0.3, "eol", 0.3, "spec1", "click"}, {"ann_start", "tis", "white", 0.3, "eol", 0.3, "spec1", "click"}},
-            not_last = {2, "eol", "white"},
-            right_doors = true,
-        },
-        {
-            905,
-            "Urban Park",
-            arr = {{"ann_start", "tis", "urban", "click"}, {"ann_start", "tis", "urban", "click"}},
-            dep = {{"ann_start", "dro_cls", 0.5, "next_st", "rocklake", "click"}, {"ann_start", "dro_cls", 0.5, "next_st", "white", "click"}},
-            arrlast = {{"ann_start", "tis", "urban", 0.3, "eol", 0.3, "spec1", "click"}, {"ann_start", "tis", "urban", 0.3, "eol", 0.3, "spec1", "click"}},
-            not_last = {2, "eol", "urban"},
-            have_inrerchange = true,
-            right_doors = true,
-        },
-        {
-            906,
-            "Rocklake",
-            arrlast = {{"ann_start", "tis", "rocklake", "eol", "spec1", "click"}, {nil}},
-            dep = {{nil}, {"ann_start", "dro_cls", 0.5, "next_st", "urban", "click"}},
-            have_inrerchange = true,
-            right_doors = true,
-        }
-    }
-})
-
-Metrostroi.AddANSPAnnouncer("[ENG]LVP Announcer 1989 | Legacy announcer by Concord", {
-    -- Global sounds
-    ann_start = {"subway_announcers/global-sounds/mireo_gong_01.mp3", 1.24},
-    click = {"subway_announcers/global-sounds/rri-click.mp3", 0.31},
-    click1 = {"subway_announcers/asnp/click.mp3", 0.30},
-    click2 = {"subway_announcers/asnp/click2.mp3", 0.10},
-    announcer_ready = {"subway_announcers/global-sounds/mireo_gong_01.mp3", 1.24},
-    drt_cls = {"subway_announcers/global-sounds/doors_closing/tape-doors.mp3", 4.25},
-    -- Station sounds
-    arr_market_street = {"subway_announcers/legacy_announcers_v29/concord-announcer/arr_market_street.mp3", 1.827000},
-    next_market_street = {"subway_announcers/legacy_announcers_v29/concord-announcer/next_market_street.mp3", 2.583900},
-    arr_aviation_university = {"subway_announcers/legacy_announcers_v29/concord-announcer/arr_aviation_university.mp3", 2.322900},
-    next_aviation_university = {"subway_announcers/legacy_announcers_v29/concord-announcer/next_aviation_university.mp3", 3.053700},
-    arr_city_hall = {"subway_announcers/legacy_announcers_v29/concord-announcer/arr_city_hall.mp3", 1.696500},
-    next_city_hall = {"subway_announcers/legacy_announcers_v29/concord-announcer/next_city_hall.mp3", 2.427300},
-    arr_white_forest = {"subway_announcers/legacy_announcers_v29/concord-announcer/arr_white_forest.mp3", 1.983600},
-    arr_white_forest_last = {"subway_announcers/legacy_announcers_v29/concord-announcer/arr_white_forest_last.mp3", 4.071600},
-    next_white_forest = {"subway_announcers/legacy_announcers_v29/concord-announcer/next_white_forest.mp3", 2.714400},
-    arr_urban_park = {"subway_announcers/legacy_announcers_v29/concord-announcer/arr_urban_park.mp3", 1.827000},
-    next_urban_park = {"subway_announcers/legacy_announcers_v29/concord-announcer/next_urban_park.mp3", 2.557800},
-    arr_rocklake = {"subway_announcers/legacy_announcers_v29/concord-announcer/arr_rocklake.mp3", 3.915000},
-    next_rocklake = {"subway_announcers/legacy_announcers_v29/concord-announcer/next_rocklake.mp3", 2.583900},
-}, {
-    {
-        LED = {3, 8, 5, 5, 4, 5},
-        Name = "MT-4 Market St. Line",
-        Loop = false,
-        spec_last = {"announcer_ready", "gong"},
-        spec_wait = {"red_signal"},
-        {
-            900,
-            "Market St.",
-            arrlast = {{nil}, {"arr_market_street", "click2"}},
-            dep = {{"drt_cls", 0.5, "next_aviation_university"}, {nil}},
-        },
-        {
-            902,
-            "Aviation Uni.",
-            arr = {{"arr_aviation_university"}, {"arr_aviation_university"}},
-            dep = {{"drt_cls", 0.5, "next_city_hall"}, {"drt_cls", 0.5, "next_market_street"}},
-        },
-        --arrlast = No support as back then turning around at AV was not possible.
-        -- //TODO mb add from other announcer a support here....
-        {
-            903,
-            "Lakeview Cth",
-            arr = {{"arr_city_hall"}, {"arr_city_hall"}},
-            dep = {{"drt_cls", 0.5, "next_white_forest"}, {"drt_cls", 0.5, "next_aviation_university"}},
-        },
-        {
-            904,
-            "White Forest",
-            arr = {{"arr_white_forest"}, {"arr_white_forest"}},
-            arrlast = {{"arr_white_forest_last"}, {"arr_white_forest_last", "click2"}},
-            dep = {{"drt_cls", 0.5, "next_urban_park"}, {"drt_cls", 0.5, "next_city_hall"}},
-            ignorelast = true,
-        },
-        {
-            905,
-            "Urban Park",
-            arr = {{"arr_urban_park"}, {"arr_urban_park"}},
-            dep = {{"drt_cls", 0.5, "next_rocklake"}, {"drt_cls", 0.5, "next_white_forest"}},
-        },
-        --arrlast = No support as back then turning around at AV was not possible.
-        -- //TODO mb add from other announcer a support here....
-        {
-            906,
-            "Rocklake",
-            arrlast = {{"arr_rocklake", "click2"}, {nil}},
-            dep = {{nil,}, {"drt_cls", 0.5, "next_urban_park"}},
         }
     }
 })
@@ -715,7 +573,7 @@ Metrostroi.AddANSPAnnouncer("[ENG] LVP announcer 1995 | Rekrut Kurbel (Tape)", {
         spec_wait = {{"spec_train_stop"}, {"spec_train_depart"}},
         BlockDoors = true,
         {
-            900,
+            400,
             "Market St.",
             arrlast = {{nil}, {"station", "MS", "platformR", "terminates_here", 0.1, "spec_belongings"}, "MS"},
             dep = {{"doors_closing", 0.25, "next_station", "AV", 0.1, "spec_handrails"}, {nil}},
@@ -723,7 +581,7 @@ Metrostroi.AddANSPAnnouncer("[ENG] LVP announcer 1995 | Rekrut Kurbel (Tape)", {
             right_doors = true,
         },
         {
-            902,
+            402,
             "Aviation Uni.",
             arr = {{"station", "AV", "platformL"}, {"station", "AV", "platformL"}},
             dep = {{"doors_closing", 0.25, "next_station", "CH"}, {"doors_closing", 0.25, "next_station", "MS", 0.1, "spec_handrails"}},
@@ -732,7 +590,7 @@ Metrostroi.AddANSPAnnouncer("[ENG] LVP announcer 1995 | Rekrut Kurbel (Tape)", {
             have_inrerchange = true,
         },
         {
-            903,
+            403,
             "Lakeview Cth",
             arr = {{"station", "CH", "platformR", 0.1, "spec_belongings"}, {"station", "CH", "platformR", 0.1, "spec_belongings"}},
             dep = {{"doors_closing", 0.25, "next_station", "WF", 0.1, "spec_emergency"}, {"doors_closing", 0.25, "next_station", "AV"}},
@@ -740,7 +598,7 @@ Metrostroi.AddANSPAnnouncer("[ENG] LVP announcer 1995 | Rekrut Kurbel (Tape)", {
             right_doors = true,
         },
         {
-            904,
+            404,
             "White Forest",
             arr = {{"station", "WF", "platformR"}, {"station", "WF", "platformR"}},
             dep = {{"doors_closing", 0.25, "next_station", "UP"}, {"doors_closing", 0.25, "next_station", "CH", 0.1, "spec_emergency"}},
@@ -750,7 +608,7 @@ Metrostroi.AddANSPAnnouncer("[ENG] LVP announcer 1995 | Rekrut Kurbel (Tape)", {
             right_doors = true,
         },
         {
-            905,
+            405,
             "Urban Park",
             arr = {{"station", "UP", "platformR"}, {"station", "UP", "platformR"}},
             dep = {{"doors_closing", 0.25, "next_station", "RL", 0.1, "spec_handrails"}, {"doors_closing", 0.25, "next_station", "WF"}},
@@ -760,7 +618,7 @@ Metrostroi.AddANSPAnnouncer("[ENG] LVP announcer 1995 | Rekrut Kurbel (Tape)", {
             right_doors = true,
         },
         {
-            906,
+            406,
             "Rocklake",
             arrlast = {{"station", "RL", "platformR", "terminates_here", 0.1, "spec_belongings"}, {nil}, "RL"},
             dep = {{nil}, {"doors_closing", 0.25, "next_station", "UP", 0.1, "spec_handrails"}},
@@ -805,14 +663,14 @@ Metrostroi.SetRRIAnnouncer({
         spec_last = {"spec_terminus", 0.1, "spec_belongings2"},
         spec_wait = {{"spec_train_stop"}, {"spec_train_depart"}},
         {
-            900,
+            400,
             "Market St.",
             arrlast = {{nil}, {"station", "MS", "platformR", "terminates_here", 0.1, "spec_belongings"}, "MS"},
             dep = {{"doors_closing", 0.25, "next_station", "AV", 0.1, "spec_handrails"}, {nil}},
             have_inrerchange = true,
         },
         {
-            902,
+            402,
             "Aviation Uni.",
             arr = {{"station", "AV", "platformL"}, {"station", "AV", "platformL"}},
             dep = {{"doors_closing", 0.25, "next_station", "CH"}, {"doors_closing", 0.25, "next_station", "MS", 0.1, "spec_handrails"}},
@@ -821,14 +679,14 @@ Metrostroi.SetRRIAnnouncer({
             have_inrerchange = true,
         },
         {
-            903,
+            403,
             "Lakeview Cth",
             arr = {{"station", "CH", "platformR", 0.1, "spec_belongings"}, {"station", "CH", "platformR", 0.1, "spec_belongings"}},
             dep = {{"doors_closing", 0.25, "next_station", "WF", 0.1, "spec_emergency"}, {"doors_closing", 0.25, "next_station", "AV"}},
             have_inrerchange = true,
         },
         {
-            904,
+            404,
             "White Forest",
             arr = {{"station", "WF", "platformR"}, {"station", "WF", "platformR"}},
             dep = {{"doors_closing", 0.25, "next_station", "UP"}, {"doors_closing", 0.25, "next_station", "CH", 0.1, "spec_emergency"}},
@@ -837,7 +695,7 @@ Metrostroi.SetRRIAnnouncer({
             have_inrerchange = true,
         },
         {
-            905,
+            405,
             "Urban Park",
             arr = {{"station", "UP", "platformR"}, {"station", "UP", "platformR"}},
             dep = {{"doors_closing", 0.25, "next_station", "RL", 0.1, "spec_handrails"}, {"doors_closing", 0.25, "next_station", "WF"}},
@@ -846,7 +704,7 @@ Metrostroi.SetRRIAnnouncer({
             have_inrerchange = true,
         },
         {
-            906,
+            406,
             "Rocklake",
             arrlast = {{"station", "RL", "platformR", "terminates_here", 0.1, "spec_belongings"}, {nil}, "RL"},
             dep = {{nil}, {"doors_closing", 0.25, "next_station", "UP", 0.1, "spec_handrails"}},
@@ -878,7 +736,7 @@ Metrostroi.SetUPOAnnouncer({
     st_cm = {"subway_announcers/global-sounds/doors_closing/old-doors.mp3", 4.54},
 }, {
     {
-        900,
+        400,
         "Market Street",
         arrlast = {nil, {"THIIS", "MAR", "TERHE"}},
         dep = {{"NEXIS", "AVI", 0.5, "st_cm"}, nil},
@@ -889,7 +747,7 @@ Metrostroi.SetUPOAnnouncer({
         right_doors = true
     },
     {
-        902,
+        402,
         "Aviation University",
         arr = {{"THIIS", "AVI"}, {"THIIS", "AVI"}},
         dep = {{"NEXIS", "CIT", 0.2, "st_cm"}, {"NEXIS", "MAR", 0.2, "st_cm"}},
@@ -899,7 +757,7 @@ Metrostroi.SetUPOAnnouncer({
         noiserandom = 0.2,
     },
     {
-        903,
+        403,
         "Lakeview Cth",
         arr = {{"THIIS", "CIT"}, {"THIIS", "CIT"}},
         dep = {{"NEXIS", "WHI", 0.2, "st_cm"}, {"NEXIS", "AVI", 0.2, "st_cm"}},
@@ -910,7 +768,7 @@ Metrostroi.SetUPOAnnouncer({
         right_doors = true
     },
     {
-        904,
+        404,
         "White Forest",
         arr = {{"THIIS", "WHI"}, {"THIIS", "WHI"}},
         dep = {{"NEXIS", "URB", 0.2, "st_cm"}, {"NEXIS", "CIT", 0.2, "st_cm"}},
@@ -921,7 +779,7 @@ Metrostroi.SetUPOAnnouncer({
         right_doors = true
     },
     {
-        905,
+        405,
         "Urban Park",
         arr = {{"THIIS", "URB"}, {"THIIS", "URB"}},
         dep = {{"NEXIS", "ROC", 0.2, "st_cm"}, {"NEXIS", "WHI", 0.2, "st_cm"}},
@@ -932,7 +790,7 @@ Metrostroi.SetUPOAnnouncer({
         right_doors = true
     },
     {
-        906,
+        406,
         "Rocklake",
         arrlast = {{"THIIS", "ROC", "TERHE"}, {nil}},
         dep = {nil, {"NEXIS", "URB", 0.2, "st_cm"}},
@@ -944,60 +802,203 @@ Metrostroi.SetUPOAnnouncer({
     }
 })
 
+-- Old / Legacy versions (semi-supportive of V3)
+Metrostroi.AddANSPAnnouncer("[ENG]LVP Announcer 1989 | Legacy announcer by Concord", {
+    -- Global sounds
+    ann_start = {"subway_announcers/global-sounds/mireo_gong_01.mp3", 1.24},
+    click = {"subway_announcers/global-sounds/rri-click.mp3", 0.31},
+    click1 = {"subway_announcers/asnp/click.mp3", 0.30},
+    click2 = {"subway_announcers/asnp/click2.mp3", 0.10},
+    announcer_ready = {"subway_announcers/global-sounds/mireo_gong_01.mp3", 1.24},
+    drt_cls = {"subway_announcers/global-sounds/doors_closing/tape-doors.mp3", 4.25},
+    -- Station sounds
+    arr_market_street = {"subway_announcers/legacy_announcers_v29/concord-announcer/arr_market_street.mp3", 1.827000},
+    next_market_street = {"subway_announcers/legacy_announcers_v29/concord-announcer/next_market_street.mp3", 2.583900},
+    arr_aviation_university = {"subway_announcers/legacy_announcers_v29/concord-announcer/arr_aviation_university.mp3", 2.322900},
+    next_aviation_university = {"subway_announcers/legacy_announcers_v29/concord-announcer/next_aviation_university.mp3", 3.053700},
+    arr_city_hall = {"subway_announcers/legacy_announcers_v29/concord-announcer/arr_city_hall.mp3", 1.696500},
+    next_city_hall = {"subway_announcers/legacy_announcers_v29/concord-announcer/next_city_hall.mp3", 2.427300},
+    arr_white_forest = {"subway_announcers/legacy_announcers_v29/concord-announcer/arr_white_forest.mp3", 1.983600},
+    arr_white_forest_last = {"subway_announcers/legacy_announcers_v29/concord-announcer/arr_white_forest_last.mp3", 4.071600},
+    next_white_forest = {"subway_announcers/legacy_announcers_v29/concord-announcer/next_white_forest.mp3", 2.714400},
+    arr_urban_park = {"subway_announcers/legacy_announcers_v29/concord-announcer/arr_urban_park.mp3", 1.827000},
+    next_urban_park = {"subway_announcers/legacy_announcers_v29/concord-announcer/next_urban_park.mp3", 2.557800},
+    arr_rocklake = {"subway_announcers/legacy_announcers_v29/concord-announcer/arr_rocklake.mp3", 3.915000},
+    next_rocklake = {"subway_announcers/legacy_announcers_v29/concord-announcer/next_rocklake.mp3", 2.583900},
+}, {
+    {
+        LED = {3, 8, 5, 5, 4, 5},
+        Name = "MT-4 Market St. Line",
+        Loop = false,
+        spec_last = {"announcer_ready"},
+        spec_wait = {"click2"},
+        {
+            400,
+            "Market St.",
+            arrlast = {{nil}, {"arr_market_street", "click2"}},
+            dep = {{"drt_cls", 0.5, "next_aviation_university"}, {nil}},
+        },
+        {
+            402,
+            "Aviation Uni.",
+            arr = {{"arr_aviation_university"}, {"arr_aviation_university"}},
+            dep = {{"drt_cls", 0.5, "next_city_hall"}, {"drt_cls", 0.5, "next_market_street"}},
+        },
+        --arrlast = No support as back then turning around at AV was not possible.
+        -- //TODO mb add from other announcer a support here....
+        {
+            403,
+            "Lakeview Cth",
+            arr = {{"arr_city_hall"}, {"arr_city_hall"}},
+            dep = {{"drt_cls", 0.5, "next_white_forest"}, {"drt_cls", 0.5, "next_aviation_university"}},
+        },
+        {
+            404,
+            "White Forest",
+            arr = {{"arr_white_forest"}, {"arr_white_forest"}},
+            arrlast = {{"arr_white_forest_last"}, {"arr_white_forest_last", "click2"}},
+            dep = {{"drt_cls", 0.5, "next_urban_park"}, {"drt_cls", 0.5, "next_city_hall"}},
+            ignorelast = true,
+        },
+        {
+            405,
+            "Urban Park",
+            arr = {{"arr_urban_park"}, {"arr_urban_park"}},
+            dep = {{"drt_cls", 0.5, "next_rocklake"}, {"drt_cls", 0.5, "next_white_forest"}},
+        },
+        --arrlast = No support as back then turning around at AV was not possible.
+        -- //TODO mb add from other announcer a support here....
+        {
+            406,
+            "Rocklake",
+            arrlast = {{"arr_rocklake", "click2"}, {nil}},
+            dep = {{nil,}, {"drt_cls", 0.5, "next_urban_park"}},
+        }
+    }
+})
+
+-- SARMAT announcer for 81-722, 81-723 and 81-724 trains.
+Metrostroi.AddSarmatUPOAnnouncer("[ENG] LVP announcer 1995 | Ballistic (SARMAT)", {
+    tone = {"subway_announcers/global-sounds/mireo_gong_01.mp3", 1.24},
+    odz = {"subway_announcers/global-sounds/doors_closing/old-doors.mp3", 4.54},
+    AVI = {"subway_announcers/ballistic_announcer/stations/aviation_university.mp3", 2.27},
+    CIT = {"subway_announcers/ballistic_announcer/stations/cityhall.mp3", 1.36},
+    MAR = {"subway_announcers/ballistic_announcer/stations/market_street.mp3", 1.28},
+    ROC = {"subway_announcers/ballistic_announcer/stations/rocklake.mp3", 1.10},
+    URB = {"subway_announcers/ballistic_announcer/stations/urban_park.mp3", 1.33},
+    WHI = {"subway_announcers/ballistic_announcer/stations/white_forest.mp3", 1.57},
+    NEXIS = {"subway_announcers/ballistic_announcer/special-files/the_next_station_is.mp3", 2.32},
+    THIIS = {"subway_announcers/ballistic_announcer/special-files/this_is.mp3", 1.33},
+    TERHE = {"subway_announcers/ballistic_announcer/special-files/this_train_terminates_here.mp3", 2.22},
+}, {
+    {
+        LED = {4, 7, 6, 5, 5, 5},
+        Name = "MT-4 Market St. Line",
+        Loop = false,
+        {
+            400, "Market Street", "Market Street",
+            arrlast = {nil, {"THIIS", "MAR", "TERHE"}},
+            dep = {{"NEXIS", "AVI"}, nil},
+            odz = "odz",
+            dist = 75,
+            right_doors = true,
+        },
+        {
+            402, "Aviation University", "Aviation University",
+            arr = {{ "THIIS", "AVI" }, { "THIIS", "AVI" }},
+            dep = {{ "NEXIS", "CIT" }, { "NEXIS", "MAR" }},
+            odz = "odz",
+            dist = 75,
+        },
+        {
+            403, "Lakeview City Hall", "Lakeview City Hall",
+            arr = {{ "THIIS", "CIT" }, { "THIIS", "CIT" }},
+            dep = {{ "NEXIS", "WHI" }, { "NEXIS", "AVI" }},
+            odz = "odz",
+            dist = 75,
+            right_doors = true,
+        },
+        {
+            404, "White Forest", "White Forest",
+            arr = {{ "THIIS", "WHI" }, { "THIIS", "WHI" }},
+            dep = {{ "NEXIS", "URB" }, { "NEXIS", "CIT" }},
+            odz = "odz",
+            dist = 75,
+            right_doors = true,
+        },
+        {
+            405, "Urban Park", "Urban Park",
+            arr = {{ "THIIS", "URB" }, { "THIIS", "URB" }},
+            dep = {{ "NEXIS", "ROC" }, { "NEXIS", "WHI" }},
+            odz = "odz",
+            dist = 75,
+            right_doors = true,
+        },
+        {
+            406, "Rocklake", "Rocklake",
+            arrlast = {{"THIIS", "ROC", "TERHE"}, nil},
+            dep = {nil, {"NEXIS", "URB"}},
+            odz = "odz",
+            dist = 75,
+            right_doors = true,
+        },
+    }
+})
+
 -- Station texture plates.
 -- 81-700 A type destination boards
 Metrostroi.AddLastStationTex("700", 999, "metrostroi_skins/destination_am/999-blank") -- Blank Texture.
 Metrostroi.AddLastStationTex("700", 998, "metrostroi_skins/destination_am/998-ofs") -- Not in service
 Metrostroi.AddLastStationTex("700", 997, "metrostroi_skins/destination_am/997-museumtr") -- museum train
-Metrostroi.AddLastStationTex("700", 998, "metrostroi_skins/destination_am/996-worktrain") -- 
-Metrostroi.AddLastStationTex("700", 906, "metrostroi_skins/destination_am/906-rl") -- Market street
-Metrostroi.AddLastStationTex("700", 905, "metrostroi_skins/destination_am/905-up") -- Ravenholm
-Metrostroi.AddLastStationTex("700", 904, "metrostroi_skins/destination_am/904-wf") -- Aviation university
-Metrostroi.AddLastStationTex("700", 902, "metrostroi_skins/destination_am/902-avi") -- White forest
-Metrostroi.AddLastStationTex("700", 901, "metrostroi_skins/destination_am/901-raven") -- Urban park
-Metrostroi.AddLastStationTex("700", 900, "metrostroi_skins/destination_am/900-ms") -- rocklake
+Metrostroi.AddLastStationTex("700", 998, "metrostroi_skins/destination_am/996-worktrain") -- Worktrain
+Metrostroi.AddLastStationTex("700", 406, "metrostroi_skins/destination_am/906-rl") -- Rocklake
+Metrostroi.AddLastStationTex("700", 405, "metrostroi_skins/destination_am/905-up") -- Urban Park
+Metrostroi.AddLastStationTex("700", 404, "metrostroi_skins/destination_am/904-wf") -- White Froest
+Metrostroi.AddLastStationTex("700", 402, "metrostroi_skins/destination_am/902-avi") -- Aviation Univcersity
+Metrostroi.AddLastStationTex("700", 401, "metrostroi_skins/destination_am/901-raven") -- Ravenholm
+Metrostroi.AddLastStationTex("700", 400, "metrostroi_skins/destination_am/900-ms") -- Market Street
 -- 702 D Types destination boards.
 Metrostroi.AddLastStationTex("702", 999, "metrostroi_skins/81-702_names/999-nis-d") -- Not in service
 Metrostroi.AddLastStationTex("702", 998, "metrostroi_skins/81-702_names/998-blank-d") -- Blank Texture.
-Metrostroi.AddLastStationTex("702", 900, "metrostroi_skins/81-702_names/900-ms-d") -- Market street
-Metrostroi.AddLastStationTex("702", 901, "metrostroi_skins/81-702_names/901-raven-d") -- Ravenholm
-Metrostroi.AddLastStationTex("702", 902, "metrostroi_skins/81-702_names/902-avi-d") -- Aviation university
-Metrostroi.AddLastStationTex("702", 904, "metrostroi_skins/81-702_names/904-wh-d") -- White forest
-Metrostroi.AddLastStationTex("702", 905, "metrostroi_skins/81-702_names/905-up-d") -- Urban park
-Metrostroi.AddLastStationTex("702", 906, "metrostroi_skins/81-702_names/906-rl-d") -- rocklake
+Metrostroi.AddLastStationTex("702", 400, "metrostroi_skins/81-702_names/900-ms-d") -- Market street
+Metrostroi.AddLastStationTex("702", 401, "metrostroi_skins/81-702_names/901-raven-d") -- Ravenholm
+Metrostroi.AddLastStationTex("702", 402, "metrostroi_skins/81-702_names/902-avi-d") -- Aviation university
+Metrostroi.AddLastStationTex("702", 404, "metrostroi_skins/81-702_names/904-wh-d") -- White forest
+Metrostroi.AddLastStationTex("702", 405, "metrostroi_skins/81-702_names/905-up-d") -- Urban park
+Metrostroi.AddLastStationTex("702", 406, "metrostroi_skins/81-702_names/906-rl-d") -- rocklake
 -- 710
 Metrostroi.AddLastStationTex("710", 999, "metrostroi_skins/81-717_names/999-blank") -- Blank
 Metrostroi.AddLastStationTex("710", 998, "metrostroi_skins/81-710_names/998-ofs") -- Out Of Service
 Metrostroi.AddLastStationTex("710", 997, "metrostroi_skins/81-710_names/997-museumtr") -- Museum Train
 Metrostroi.AddLastStationTex("710", 996, "metrostroi_skins/81-710_names/996-worktrain") -- Work Train
-Metrostroi.AddLastStationTex("710", 900, "metrostroi_skins/81-710_names/900-ms") -- Market street
-Metrostroi.AddLastStationTex("710", 901, "metrostroi_skins/81-710_names/901-raven") -- Ravenholm
-Metrostroi.AddLastStationTex("710", 902, "metrostroi_skins/81-710_names/902-avi") -- Aviation university
-Metrostroi.AddLastStationTex("710", 904, "metrostroi_skins/81-710_names/904-wf") -- White forest
-Metrostroi.AddLastStationTex("710", 905, "metrostroi_skins/81-710_names/905-up") -- Urban park
-Metrostroi.AddLastStationTex("710", 906, "metrostroi_skins/81-710_names/906-rl") -- rocklake
+Metrostroi.AddLastStationTex("710", 400, "metrostroi_skins/81-702_names/900-ms-d") -- Market street
+Metrostroi.AddLastStationTex("710", 401, "metrostroi_skins/81-702_names/901-raven-d") -- Ravenholm
+Metrostroi.AddLastStationTex("710", 402, "metrostroi_skins/81-702_names/902-avi-d") -- Aviation university
+Metrostroi.AddLastStationTex("710", 404, "metrostroi_skins/81-702_names/904-wh-d") -- White forest
+Metrostroi.AddLastStationTex("710", 405, "metrostroi_skins/81-702_names/905-up-d") -- Urban park
+Metrostroi.AddLastStationTex("710", 406, "metrostroi_skins/81-702_names/906-rl-d") -- rocklake
 --717
 Metrostroi.AddLastStationTex("717", 999, "metrostroi_skins/81-717_schemes/999-blank") -- Blank
 Metrostroi.AddLastStationTex("717", 998, "metrostroi_skins/81-717_schemes/998-ofs") -- Out Of Service
 Metrostroi.AddLastStationTex("717", 997, "metrostroi_skins/81-717_schemes/997-museumtr") -- Museum Train
 Metrostroi.AddLastStationTex("717", 996, "metrostroi_skins/81-717_schemes/996-worktrain") -- Work Train
-Metrostroi.AddLastStationTex("717", 900, "metrostroi_skins/81-717_schemes/900-ms") -- Market street
-Metrostroi.AddLastStationTex("717", 901, "metrostroi_skins/81-717_schemes/901-raven") -- Ravenholm
-Metrostroi.AddLastStationTex("717", 902, "metrostroi_skins/81-717_schemes/902-avi") -- Aviation university
-Metrostroi.AddLastStationTex("717", 904, "metrostroi_skins/81-717_schemes/904-wf") -- White forest
-Metrostroi.AddLastStationTex("717", 905, "metrostroi_skins/81-717_schemes/905-up") -- Urban park
-Metrostroi.AddLastStationTex("717", 906, "metrostroi_skins/81-717_schemes/906-rl") -- rocklake
+Metrostroi.AddLastStationTex("717", 400, "metrostroi_skins/81-702_names/900-ms-d") -- Market street
+Metrostroi.AddLastStationTex("717", 401, "metrostroi_skins/81-702_names/901-raven-d") -- Ravenholm
+Metrostroi.AddLastStationTex("717", 402, "metrostroi_skins/81-702_names/902-avi-d") -- Aviation university
+Metrostroi.AddLastStationTex("717", 404, "metrostroi_skins/81-702_names/904-wh-d") -- White forest
+Metrostroi.AddLastStationTex("717", 405, "metrostroi_skins/81-702_names/905-up-d") -- Urban park
+Metrostroi.AddLastStationTex("717", 406, "metrostroi_skins/81-702_names/906-rl-d") -- rocklake
 --720
 Metrostroi.AddLastStationTex("720", 999, "metrostroi_skins/81-717_schemes/999-blank") -- Blank
 Metrostroi.AddLastStationTex("720", 998, "metrostroi_skins/81-717_schemes/998-ofs") -- Out Of Service
 Metrostroi.AddLastStationTex("720", 997, "metrostroi_skins/81-717_schemes/997-museumtr") -- Museum Train
 Metrostroi.AddLastStationTex("720", 996, "metrostroi_skins/81-717_schemes/996-worktrain") -- Work Train
-Metrostroi.AddLastStationTex("720", 900, "metrostroi_skins/81-717_schemes/900-ms") -- Market street
-Metrostroi.AddLastStationTex("720", 901, "metrostroi_skins/81-717_schemes/901-raven") -- Ravenholm
-Metrostroi.AddLastStationTex("720", 902, "metrostroi_skins/81-717_schemes/902-avi") -- Aviation university
-Metrostroi.AddLastStationTex("720", 904, "metrostroi_skins/81-717_schemes/904-wf") -- White forest
-Metrostroi.AddLastStationTex("720", 905, "metrostroi_skins/81-717_schemes/905-up") -- Urban park
-Metrostroi.AddLastStationTex("720", 906, "metrostroi_skins/81-717_schemes/906-rl") -- rocklake
+Metrostroi.AddLastStationTex("720", 400, "metrostroi_skins/81-702_names/900-ms-d") -- Market street
+Metrostroi.AddLastStationTex("720", 401, "metrostroi_skins/81-702_names/901-raven-d") -- Ravenholm
+Metrostroi.AddLastStationTex("720", 402, "metrostroi_skins/81-702_names/902-avi-d") -- Aviation university
+Metrostroi.AddLastStationTex("720", 404, "metrostroi_skins/81-702_names/904-wh-d") -- White forest
+Metrostroi.AddLastStationTex("720", 405, "metrostroi_skins/81-702_names/905-up-d") -- Urban park
+Metrostroi.AddLastStationTex("720", 406, "metrostroi_skins/81-702_names/906-rl-d") -- rocklake
 Metrostroi.AddPassSchemeTex("717_new", "Ruralline_1995", {"metrostroi_skins/81-717_schemes/717-ruralline_v3-map",})
 Metrostroi.AddPassSchemeTex("720", "Ruralline_1995", {"metrostroi_skins/81-720_schemes/720-linemap-ruralline-v3-left", "metrostroi_skins/81-720_schemes/720-linemap-ruralline-v3-right",})
 Metrostroi.AddPassSchemeTex("722", "Ruralline_1995", {"metrostroi_skins/81-722_schemes/ruralline_1995r", "metrostroi_skins/81-722_schemes/ruralline-1995",})

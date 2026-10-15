@@ -15,11 +15,11 @@ Metrostroi.AddCISConfig("Lakeview Transport MT-4", {
 		Line = 1,
 		Color = Color(134, 99, 64),
 		English = true,
-		{900, "Market street"},
-		{902, "Aviation university"},
-		{903, "Lakeview City hall"},
-		{904, "White forest"},
-		{905, "Urban park"},
-		{906, "Rocklake"},
+		{400, "Market street"},
+		{402, "Aviation university"},
+		{403, "Lakeview City hall"},
+		{404, "White forest"},
+		{405, "Urban park"},
+		{406, "Rocklake"},
 	}
 })
